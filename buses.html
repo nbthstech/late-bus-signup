@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<title>Bus Route Signup</title>
+
+	<head>
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
+	</head>
+	<script async defer src="/~arity/js/school/buses.js"></script>
+	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
+
+	<body>
+		<h1>Sign up for your bus today!</h1>
+		<table>
+			<thead>
+				<th>Bus</th>
+				<th>Route</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>IDK</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>IDK</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>The Renny</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="SignIn" class="g-signin2" data-onsuccess="onSignIn" style="margin:1ex"></div>
+		<span style="margin: 5px">
+			Bus : <br>
+			<input type="radio" name="bus" value="1"> 1<br>
+			<input type="radio" name="bus" value="2"> 2<br>
+			<input type="radio" name="bus" value="3"> 3
+		</span><br>
+		<span><button onclick="Buses.submit()" id="submit" style="margin: 5px">Submit</button></span><br>
+		<table id="busTable">
+			<thead>
+				<th>Name</th>
+				<th>Bus #</th>
+			</thead>
+			<tbody></tbody>
+			<tfoot>
+				<tr>
+				</tr>
+			</tfoot>
+		</table>
+
+</html>
