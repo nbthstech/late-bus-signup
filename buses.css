@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap');
+
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px;
+    text-align: center;
+    background: rgb(245, 245, 245);
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+button {
+    margin: 5px;
+}
+td, th {
+    text-align: center;
+    padding: 10px;
+}
+table {
+    margin: auto;
+}
+
+#busInput {
+    display: block;
+    margin: auto;
+}
+#loginPanel {
+    height: 100%;
+    max-width: 75%;
+    margin:auto;
+    padding: 20px;
+
+    background: white;
+
+    -webkit-box-shadow: -5px 2px 26px -1px rgba(0,0,0,0.35);
+    -moz-box-shadow: -5px 2px 26px -1px rgba(0,0,0,0.35);
+    box-shadow: -5px 2px 26px -1px rgba(0,0,0,0.35);
+}

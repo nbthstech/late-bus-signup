@@ -3,6 +3,7 @@
 	<title>Bus Route Signup</title>
 
 	<head>
+		<link rel="stylesheet" type="text/css" href="buses.css">
 		<meta name="google-signin-scope" content="profile email">
 		<meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
 	</head>
@@ -10,6 +11,7 @@
 	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
 
 	<body>
+	<div id="loginPanel">
 		<h1>Sign up for your bus today!</h1>
 		<table>
 			<thead>
@@ -32,7 +34,7 @@
 			</tbody>
 		</table>
 		<div id="SignIn" class="g-signin2" data-onsuccess="onSignIn" style="margin:1ex"></div>
-		<span style="margin: 5px">
+		<span id="busInput">
 			Bus : <br>
 			<input type="radio" name="bus" value="1"> 1<br>
 			<input type="radio" name="bus" value="2"> 2<br>
@@ -50,5 +52,6 @@
 				</tr>
 			</tfoot>
 		</table>
-
+	</div>
+	</body>
 </html>
