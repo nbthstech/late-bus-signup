@@ -17,13 +17,14 @@
                 <ul>
                     <li><a>Bus Signup</a></li>
                     <li><a href = "index.html">Sign Up</a></li>
-                    <li><a class = "active" href = "Routes.html">Routes</a></li>
+                    <li><a class = "active" href = "routes.html">Routes</a></li>
                     <li><a> Roster </a></li>
                 </ul>
         </nav>   
-        <div class = "rContainer">
-                <a class="prev" onclick="changeSlides(-1)" >&#10094;</a>
-                <a class="next" onclick="changeSlides(1)">&#10095;</a>
+   
+    
+        <div class = "rContainer delay-1s fade-in animated">
+            
             <div class="slideB">
                     <div class = "shaded"><h1 class = "titles">Bus 1</h1></div>
                     <ul class = "routes fadeIn animated">
@@ -112,9 +113,13 @@
                             <li>Stop #25: Mount Dr</li>
                     </ul>
                 </div>
-
-
+                <a style = "opacity:0"class="prev" onclick="changeSlides(-1)" >&#10094;</a>
+                <a style = "opacity:0" class="next" onclick="changeSlides(1)">&#10095;</a>
             </div>
+            <div id = "rRight">
+                <img src = "images/map.png" alt = "nb map" id = "nbMap"/>
+            </div>
+
         </div>
 
     </div>
