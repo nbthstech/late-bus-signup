@@ -7,7 +7,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 50px;
     text-align: center;
+    /*solid background if gradient not supported*/
     background: rgb(245, 245, 245);
+    background: linear-gradient(90deg, rgba(49,137,255,1) 0%, rgba(251,255,145,1) 100%);
+
 }
 h1 {
     font-family: 'Oswald', sans-serif;
