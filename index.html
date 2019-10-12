@@ -14,10 +14,10 @@
     <div id = "content" class = "">
         <nav class = "">
             <ul>
-                <li><a>Bus Signup</a></li>
-                <li><a class = "active" href = "index.html">Sign Up</a></li>
-                <li><a href = "routes.html">Routes</a></li>
-                <li><a> Roster </a></li>
+                <li><a id = "navTitle">Bus Signup</a></li>
+                <li><a class = "active navItem" href = "index.html">Sign Up</a></li>
+                <li><a class = "navItem" href = "routes.html">Routes</a></li>
+                <li><a class = "navItem"> Roster </a></li>
                 
             </ul>
         </nav>  
@@ -27,21 +27,21 @@
                 <div class="row">
         
         
-                    <input placeholder = "Name"id="name" class="input" name="" type="text" value="" size="30"/><br/>
+                    <input required placeholder = "Name"id="name" class="input" name="" type="text" value="" size="30"/><br/>
         
                     <span id="name_validation" class="error_message"></span>
                 </div>
                
                 <div class="row">
-                    <input id="teacher" placeholder = "Club Adviser" class="input" name="" type="text" value="" size="30"/><br/>
+                    <input required id="teacher" placeholder = "Club Adviser" class="input" name="" type="text" value="" size="30"/><br/>
                     <span id="email_validation" class="error_message"></span>
                 </div>
                 <div class="row">
-                    <textarea class = "input" id="message" placeholder = "Reason" class="message" name=" rows="7" cols="30"></textarea><br/>
+                    <textarea required class = "input" id="message" placeholder = "Reason" class="message" name=" rows="7" cols="30"></textarea><br/>
                     <span id="message_validation" class="error_message"></span>
                 </div>
                 <div class = "row">
-                        <select class = "input">
+                        <select required class = "input">
                             <option disabled selected value> -- Select a Bus -- </option>
                             <option value = "bus1">Bus 1</option>
                             <option value = "bus2">Bus 2</option>

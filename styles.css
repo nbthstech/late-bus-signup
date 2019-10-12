@@ -204,3 +204,37 @@ nav li a:hover {
     position:inline-block;
     width:50%;
 }
+
+@media only screen and (max-width: 600px) {
+    .content {
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+    nav {
+        display:inline-block;
+        text-align:center;
+        width:100%;    
+    }
+    #raider {
+        display:none;
+    }
+    #iForm {
+        float:none;
+        top:10%;
+        width:100%;
+    }
+    #navTitle {
+        display:none;
+    }
+    .navItem {
+    }
+    nav ul li {
+        padding-right:0;
+        float:none;
+        display:inline-block;
+        text-align:center;
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
