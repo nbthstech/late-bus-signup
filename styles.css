@@ -7,7 +7,7 @@ body {
 #content {
     background:white;   
     width:70%;
-    height:70%;
+    min-height:70%;
     position:absolute;
     border-radius:30px;
     box-shadow: 0px 8px 8px 0px #000000;
@@ -119,6 +119,8 @@ nav li a:hover {
 .titles {
     text-align:center;
     font-size:2em;
+    cursor:pointer;
+    user-select:none;
 }
 
 .prev, .next {
@@ -132,12 +134,8 @@ nav li a:hover {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    padding-left:18%;
 }
 
-.next {
-    padding-left: 30.5%;
-}
 
 
 .prev:hover, .next:hover {
@@ -207,9 +205,7 @@ nav li a:hover {
 
 @media only screen and (max-width: 768px) {
     .content {
-        width:100%;
         height:auto;
-        position:relative;
     }
     nav {
         display:inline-block;
@@ -237,4 +233,26 @@ nav li a:hover {
         padding-left:5%;
         padding-right:5%;
     }
+    #sTitle {
+        padding-top:3%;
+    }
+    #nbMap {
+        display:none;
+    }
+    .rContainer {
+        width:100%;
+    }
+    
+    .slideB ul {
+        -moz-column-count: 1;
+        -moz-column-gap: 30px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 30px;
+        column-count: 0;
+        column-gap: 30px;
+
+    }
+ 
+  
+
 }

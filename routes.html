@@ -15,10 +15,10 @@
     <div id = "content">
         <nav class = "">
                 <ul>
-                    <li><a>Bus Signup</a></li>
-                    <li><a href = "index.html">Sign Up</a></li>
-                    <li><a class = "active" href = "routes.html">Routes</a></li>
-                    <li><a> Roster </a></li>
+                    <li><a id = "navTitle">Bus Signup</a></li>
+                    <li><a class = "navItem" href = "index.html">Sign Up</a></li>
+                    <li><a class = "active navItem" href = "routes.html">Routes</a></li>
+                    <li><a class = "navItem"> Roster </a></li>
                 </ul>
         </nav>   
    
@@ -26,7 +26,7 @@
         <div class = "rContainer delay-1s fade-in animated">
             
             <div class="slideB">
-                    <div class = "shaded"><h1 class = "titles">Bus 1</h1></div>
+                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 1</h1></div>
                     <ul class = "routes fadeIn animated">
                     <li>Stop #1: All Along Hartland Commons</li>
                     <li>Stop #2: Finnigans Ln & Sassafras</li>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div id = "busTwo" class="slideB">
-                    <div class = "shaded"><h1 class = "titles">Bus 2</h1></div>
+                    <div class = "shaded"><h1 class = "titles"  onclick="changeSlides(1)">Bus 2</h1></div>
                     <ul class = "routes fadeIn animated">
                         <li>Stop #1: Pardun & Leary</li>
                         <li>Stop #2: Lenox & Stelle</li>
@@ -84,7 +84,7 @@
                 </div>
 
                 <div id = "busThree" class="slideB">
-                    <div class = "shaded"><h1 class = "titles">Bus 3</h1></div>
+                    <div class = "shaded"><h1 class = "titles"  onclick="changeSlides(1)">Bus 3</h1></div>
                     <ul class = "routes fadeIn animated">
                             <li>Stop #1: Adams Ln (both sides)</li>
                             <li>Stop #2: Adams & Eden</li>
@@ -113,8 +113,7 @@
                             <li>Stop #25: Mount Dr</li>
                     </ul>
                 </div>
-                <a style = "opacity:0"class="prev" onclick="changeSlides(-1)" >&#10094;</a>
-                <a style = "opacity:0" class="next" onclick="changeSlides(1)">&#10095;</a>
+            
             </div>
             <div id = "rRight">
                 <img src = "images/map.png" alt = "nb map" id = "nbMap"/>
