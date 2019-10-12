@@ -3,6 +3,9 @@ body {
     font-family: Verdana, sans-serif;
 
 }
+*:focus {
+    outline: none;
+}
 
 #content {
     background:white;   
@@ -10,17 +13,14 @@ body {
     min-height:70%;
     position:absolute;
     border-radius:30px;
-    box-shadow: 0px 8px 8px 0px #000000;
+    box-shadow: 0px 8px 8px 0px #464444;
     left:15%;
     top:15%;
-
+  
 }
 
 
-nav li:first-child {
-    float:left;
-    padding-left:20px;
-}
+
 nav ul li {
     float:right;
     padding-right:50px;
@@ -67,9 +67,7 @@ nav a {
 
     color: rgb(54, 54, 201);
 }
-nav li:first-child a:hover {
-    border-bottom:0;
-}
+
 nav li a:hover {
     border-bottom:0.1px solid currentColor;
 }
@@ -121,6 +119,10 @@ nav li a:hover {
     font-size:2em;
     cursor:pointer;
     user-select:none;
+    background-image:linear-gradient(to left, rgb(186, 186, 229),rgb(50, 50, 223));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .prev, .next {
@@ -167,13 +169,16 @@ nav li a:hover {
 
 }
 
+
+
 .input {
     border-radius:10px;
     height:10%;
     padding-top:5px;
     padding-bottom:5px;
     padding-left:5px;
-    box-shadow: 1px 2px 0px 0px #000000;
+    border:none;
+    box-shadow: 3px 2px 5px 5px #ece6e6;
 
 }
 #message {
@@ -185,12 +190,28 @@ nav li a:hover {
 }
 #submit_button {
     margin:15px;
-    font-family: 'Courier', monospace;
     display: inline-block;
     border-radius:10px;
+    border:none;
+    background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
+    width:15%;
+    color:white;
+    box-shadow: 3px 3px 0px 0px #f1ecec;
+
+    padding-top:5px;
+    padding-bottom:5px;
+    transition:width 200ms ease-in;
+}
+#submit_button:hover {
+    background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(65, 65, 211));
+    width:15.2%;
 }
 #sTitle {
     padding-bottom:2%;
+    background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 #raider {
     max-width:50%;
@@ -208,7 +229,7 @@ nav li a:hover {
         font-size:75%;
     }
     .content {
-        height:auto;
+    
     }
     nav {
         display:inline-block;
@@ -255,7 +276,9 @@ nav li a:hover {
         column-gap: 30px;
 
     }
- 
+    .routes {
+        padding-left:5%;
+    }
   
 
 }
