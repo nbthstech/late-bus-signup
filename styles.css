@@ -204,6 +204,9 @@ nav li a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        font-size:75%;
+    }
     .content {
         height:auto;
     }
