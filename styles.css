@@ -231,13 +231,19 @@ nav li a:hover {
         font-size:75%;
     }
     nav {
-        width:100%;    
+        width:100%; 
     }
     #mainNav li:first-child {
         float:right;
     }
+    #mainNav .active {
+        display:none;
+    }
     #raider {
         display:none;
+    }
+    #rNav {
+        text-align:center;
     }
     #iForm {
         float:none;
