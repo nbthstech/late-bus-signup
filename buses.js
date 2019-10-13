@@ -38,4 +38,5 @@ function onSignIn(googleUser) {
     const divButton = document.getElementById("SignIn");
     divButton.hidden = true;
 }
+
 //# sourceMappingURL=buses.js.map
