@@ -194,10 +194,10 @@ nav li a:hover {
     border-radius:10px;
     border:none;
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
-    width:15%;
+    min-width:15%;
     color:white;
     box-shadow: 3px 3px 0px 0px #f1ecec;
-
+    width:auto;
     padding-top:5px;
     padding-bottom:5px;
     transition:width 200ms ease-in;
@@ -228,9 +228,6 @@ nav li a:hover {
     body {
         font-size:75%;
     }
-    .content {
-    
-    }
     nav {
         display:inline-block;
         text-align:center;
@@ -247,7 +244,15 @@ nav li a:hover {
     #navTitle {
         display:none;
     }
-    .navItem {
+    #submit_button {
+        border:solid;
+        border-width: 0.5px;
+        border-color: black;
+    }
+    .input {
+        border:solid;
+        border-width: 0.5px;
+        border-color: black;
     }
     nav ul li {
         padding-right:0;
@@ -277,7 +282,7 @@ nav li a:hover {
 
     }
     .routes {
-        padding-left:5%;
+        padding-left:8%;
     }
   
 
