@@ -232,7 +232,9 @@ nav li a:hover {
     nav {
         width:100%;    
     }
- 
+    #mainNav li:first-child {
+        float:right;
+    }
     #raider {
         display:none;
     }
