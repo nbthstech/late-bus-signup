@@ -149,6 +149,18 @@ nav li a:hover {
 .prev:hover, .next:hover {
     color: rgba(0,0,0,0.8);
 }
+.next {
+    position:inline-block;
+    top:16%;
+    left:29.8%;
+    width:1.5%;
+}
+.prev {
+    position:inline-block;
+    top:16%;
+    left:19%;
+    width:1.5%;
+}
 
 #rRight {
     float:right;
