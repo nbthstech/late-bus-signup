@@ -125,6 +125,7 @@ nav li a:hover {
 
 }
 
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -200,11 +201,9 @@ nav li a:hover {
     width:auto;
     padding-top:5px;
     padding-bottom:5px;
-    transition:width 200ms ease-in;
 }
 #submit_button:hover {
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(65, 65, 211));
-    width:15.2%;
 }
 #sTitle {
     padding-bottom:2%;

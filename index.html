@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
     <title>Bus Signup</title>
-    <link rel = "stylesheet" href = "styles.css" type ="text/css"/>
-    <script src="slideshow.js"></script>
-    <link rel = "stylesheet" href = "Animate.css" type = "text/css" />
+
+    <meta charset="UTF-8">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
+    <link rel = "stylesheet" href = "styles.css" type ="text/css"/>
+    <link rel = "stylesheet" href = "Animate.css" type = "text/css" />
+
+    <script async defer src="buses.js"></script>
+	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
 </head>
 <body>
     <div id = "content" class = "">
@@ -19,8 +24,11 @@
                 <li><a class = "navItem"> Roster </a></li>
             </ul>
         </nav>  
+        <div id="SignIn" class="g-signin2" data-onsuccess="onSignIn"></div>
+
         <div id = "iForm" class = "fadeIn animated">
             <h1 id = "sTitle">Late Bus Signup</h1>
+
             <form >
                 <div class="row">
         
@@ -53,5 +61,7 @@
                 <img src = "images/raiderbird.png" alt = "raider" id = "raider"/>
         </div>
     </div>
+
+   
 </body>
 </html>
