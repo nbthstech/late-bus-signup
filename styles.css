@@ -38,7 +38,11 @@ nav {
     height: 75px;
     height:10%;
 }
-
+nav li:first-child {
+    float:left;
+    padding-top:1%;
+    padding-left:1%;
+}
 nav li {
     display:inline;
     font-size:0.8em;
@@ -74,12 +78,7 @@ nav li a:hover {
 
 
 
-#SignIn {
-    position:absolute;
-    top:25%;
-    left:20%;
-    z-index:1;
-}
+
 
 
 .rContainer {
@@ -209,7 +208,6 @@ nav li a:hover {
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(65, 65, 211));
 }
 #sTitle {
-    padding-bottom:10%;
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
