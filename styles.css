@@ -127,7 +127,7 @@ nav li a:hover {
     background-image:linear-gradient(to left, rgb(186, 186, 229),rgb(50, 50, 223));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    background-color:blue;
 }
 
 
@@ -256,6 +256,9 @@ nav li a:hover {
     }
     #rNav {
         text-align:center;
+    }
+    .prev,.next {
+        display:none;
     }
     #iForm {
         float:none;
