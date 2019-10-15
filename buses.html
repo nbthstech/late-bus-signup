@@ -12,7 +12,7 @@
 
 	<body>
 	<div id="loginPanel">
-		<h1>Sign up for your bus today!</h1>
+		<h1>SIGN UP FOR YOUR BUS TODAY!</h1>
 		<table>
 			<thead>
 				<th>Bus</th>
@@ -36,11 +36,11 @@
 		<div id="SignIn" class="g-signin2" data-onsuccess="onSignIn" style="margin:1ex"></div>
 		<span id="busInput">
 			Bus : <br>
-			<input type="radio" name="bus" value="1"> 1<br>
-			<input type="radio" name="bus" value="2"> 2<br>
-			<input type="radio" name="bus" value="3"> 3
+			<input type="radio" class="radio" name="bus" value="1" checked> 1<br>
+			<input type="radio" class="radio" name="bus" value="2"> 2<br>
+			<input type="radio" class="radio" name="bus" value="3"> 3
 		</span><br>
-		<span><button onclick="Buses.submit()" id="submit" style="margin: 5px">Submit</button></span><br>
+		<span><button onclick="Buses.submit()" id="submit">Submit</button></span><br>
 		<table id="busTable">
 			<thead>
 				<th>Name</th>
