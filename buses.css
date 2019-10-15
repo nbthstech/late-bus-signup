@@ -42,3 +42,10 @@ table {
     -moz-box-shadow: -5px 2px 26px -1px rgba(0,0,0,0.35);
     box-shadow: -5px 2px 26px -1px rgba(0,0,0,0.35);
 }
+#logo {
+    height: 75px;
+    width: 75px;
+}
+#logoDiv {
+    text-align: left;
+}
