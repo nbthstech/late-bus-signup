@@ -119,3 +119,8 @@ label
 #logoDiv {
     text-align: left;
 }
+
+#SignIn {
+    display: inline-block;
+    text-align: center;
+}
