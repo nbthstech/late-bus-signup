@@ -10,23 +10,33 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
     <link rel = "stylesheet" href = "styles.css" type ="text/css"/>
-    <link rel = "stylesheet" href = "Animate.css" type = "text/css" />
 
     <script async defer src="buses.js"></script>
 	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
 </head>
 <body>
-    <div id = "content" class = "">
-        <nav id = "mainNav">
+    <nav id = "responsiveNav">
+        <div class = "hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class = "nav-links">
+            <li><a href = "index.html">Sign Up</a></li>
+            <li><a href = "routes.html">Routes</a></li>
+            <li><a href = "signin.html">Sign In</a></li>
+            <li><a href = "profile.html">Profile</a></li>
+        </ul>
+    </nav> 
+    <div id = "content" class = "" >    
+        <nav id = "mainNav" class="desktopNav">
             <ul>
                 <li><div id="SignIn" data-width="100"  data-longtile="true"class="g-signin2" data-onsuccess="onSignIn"></div></li>
-                <li><a class = "active navItem" href = "index.html">Sign Up</a></li>
-                <li><a class = "navItem" href = "routes.html">Routes</a></li>
+                <li><a class="active" href = "index.html">Sign Up</a></li>
+                <li><a href = "routes.html">Routes</a></li>
             </ul>
-        </nav>  
-
-
-        <div id = "iForm" class = "fadeIn animated">
+        </nav> 
+        <div id = "iForm">
             <h1 id = "sTitle">Late Bus Signup</h1>
 
             <form >
@@ -62,6 +72,10 @@
         </div>
     </div>
 
-   
+
+
+
+    <script src = "app.js"></script>
+
 </body>
 </html>

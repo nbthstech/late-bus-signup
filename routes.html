@@ -5,26 +5,39 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
     <title>Bus Routes</title>
     <link rel = "stylesheet" href = "styles.css" type ="text/css"/>
-    <link rel = "stylesheet" href = "Animate.css" type = "text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="slideshow.js"></script>
 
 </head>
 <body>
+    <nav id = "responsiveNav">
+        <div class = "hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class = "nav-links">
+            <li><a href = "index.html">Sign Up</a></li>
+            <li><a href = "routes.html">Routes</a></li>
+            <li><a href = "signin.html">Sign In</a></li>
+            <li><a href = "profile.html">Profile</a></li>
+        </ul>
+    </nav> 
+  
     <div id = "content">
-        <nav id = "rNav">
-                <ul>
-                    <li><a class = "navItem" href = "index.html">Sign Up</a></li>
-                    <li><a class = "active navItem" href = "routes.html">Routes</a></li>
-                </ul>
-        </nav>   
-   
-    
-        <div class = "rContainer delay-1s fade-in animated">
+     
+     <nav id = "rNav" class="desktopNav">
+            <ul>
+                <li><a class = "navItem" href = "index.html">Sign Up</a></li>
+                <li><a class = "active navItem" href = "routes.html">Routes</a></li>
+            </ul>
+    </nav>   
+ 
+        <div class = "rContainer">
             
             <div class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(-1)">Bus 1</h1></div>
+                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 1</h1></div>
                     <ul class = "routes fadeIn animated">
                     <li>Stop #1: All Along Hartland Commons</li>
                     <li>Stop #2: Finnigans Ln & Sassafras</li>
@@ -53,7 +66,7 @@
                 </div>
 
                 <div id = "busTwo" class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(-1)">Bus 2</h1></div>
+                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 2</h1></div>
                     <ul class = "routes fadeIn animated">
                         <li>Stop #1: Pardun & Leary</li>
                         <li>Stop #2: Lenox & Stelle</li>
@@ -82,7 +95,7 @@
                 </div>
 
                 <div id = "busThree" class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(-1)">Bus 3</h1></div>
+                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 3</h1></div>
                     <ul class = "routes fadeIn animated">
                             <li>Stop #1: Adams Ln (both sides)</li>
                             <li>Stop #2: Adams & Eden</li>
@@ -122,6 +135,9 @@
 
     </div>
 
+
+
+    <script src="app.js"></script>
 
 </body>
 </html>
