@@ -297,8 +297,10 @@ body {
         z-index:1;
         background:rgb(21, 85, 182);
         flex-direction:column;
-        height:100vh;
+        align-items:stretch;
         width:100%; 
+        -webkit-overflow-scrolling:touch;
+
         clip-path: circle(0px at 88% 7%);
         -webkit-clip-path: circle(0px at 88% 7%);
         transition: all 1s ease-out;
