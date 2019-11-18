@@ -1,5 +1,8 @@
 body {
-    background:linear-gradient(to right, rgb(255, 204, 0) 0%,rgb(255, 204, 38) 50%,rgb(0, 51, 153) 0%, rgb(0, 51, 153) 50% );
+    /*solid background if gradient not supported*/
+    background: rgba(49, 137, 255, 1);
+    /* linear gradient */
+    background: linear-gradient(90deg, rgba(49, 137, 255, 1) 0%, rgba(251, 255, 145, 1) 100%);
     font-family: Verdana, sans-serif;
 
 }
@@ -139,6 +142,11 @@ body {
 
 }
 
+#tech {
+
+    display:none;
+}
+
 #busTwo, #busThree{
     display:none;
 }
@@ -275,6 +283,10 @@ body {
         height:3px;
         background:white;
         margin:5px;
+        border-color:rgb(107, 107, 202);
+        border:solid;   
+        border-radius:5px;
+        border-width:0.5px;
     }
     #responsiveNav {
         position:relative;
@@ -295,7 +307,7 @@ body {
         top:0;
         margin:0;
         z-index:1;
-        background:rgb(56, 98, 236);
+        background:rgba(49, 137, 255, 1);
         flex-direction:column;
         height:100%;    
         width:100%; 
@@ -333,6 +345,13 @@ body {
     }
     #navTitle {
         display:none;
+    }
+    #tech {
+        width:12%;   
+        position:absolute;
+        left:3%;
+        top:3%;
+        display:block;
     }
     #submit_button {
         border:solid;
