@@ -315,7 +315,6 @@ body {
         
         clip-path: circle(0px at 88% 7%);
         -webkit-clip-path: circle(0px at 88% 7%);
-        transition: all 1s ease-out;
         pointer-events:none;
     }
  
