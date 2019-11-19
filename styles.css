@@ -20,6 +20,8 @@ body {
     left:50%;
     top:15%;
     transform:translateX(-50%);
+    margin-bottom:5%;
+
 }
 
 
@@ -270,6 +272,15 @@ body {
     width:50%;
 }
 
+#clubList {
+    font-size:20px;
+    text-align:left;
+    margin-left:55%;
+    transform:translateX(-50%);
+    padding-top:8%;
+    padding-bottom:8%;
+}
+
 @media only screen and (max-width: 768px) {
     body {
         font-size:75%;
@@ -331,14 +342,13 @@ body {
         display:none;
     }
 
-    #content {
-        margin-bottom:20%;
-    }
+ 
     #iForm {
         float:none;
-        top:10%;
         width:100%;
+        top:10%;
     }
+    
     .titles {
         padding-top:5%;
     }
@@ -392,12 +402,10 @@ body {
         display: flex;
         flex-direction:column;
         justify-content: center;
+        margin-bottom:15%;
 
     }
     .slideB ul li {
         padding-top:5%;
     }
-    
-    
-    
 }
