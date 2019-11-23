@@ -43,16 +43,24 @@
             <h1 id = "sTitle">Late Bus Signup</h1>
 
             <form >
-                <div class="row">
-        
-        
-                    <input required placeholder = "Club Name"id="name" class="input" name="" type="text" value="" size="30"/><br/>
+                <div class= "row">
+                    <select required class="input" id = "selAct" onchange='checkResponse();'>
+                        <option disabled selected value> --  Activity? -- </option>
+                        <option value = "club">Club</option>
+                        <option value = "sport">Sport</option>
+                        <option value = "extra_help">Extra Help</option>
+                        <option value = "detention">Detention</option>
+                        <option value = "other">Other</option>
+                    </select>
+                </div>
+                <div class="row" style='display:none' id ="specifyRow">
+                    <input  required placeholder = "Specify"id="specify" class="input" name="" type="text" value="" size="30"/><br/>
         
                     <span id="name_validation" class="error_message"></span>
                 </div>
                
-                <div class="row">
-                    <input required id="teacher" placeholder = "Club Adviser" class="input" name="" type="text" value="" size="30"/><br/>
+                <div class="row" style='display:none' id ="teacherRow">
+                    <input  required id="teacher" placeholder = "" class="input" name="" type="text" value="" size="30"/><br/>
                     <span id="email_validation" class="error_message"></span>
                 </div>
                 <div class="row">
