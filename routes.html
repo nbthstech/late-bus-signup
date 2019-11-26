@@ -21,8 +21,6 @@
         <ul class = "nav-links">
             <li><a href = "index.html">Sign Up</a></li>
             <li><a href = "routes.html">Routes</a></li>
-            <li><a href = "signin.html">Sign In</a></li>
-            <li><a href = "profile.html">Profile</a></li>
         </ul>
     </nav> 
   
@@ -31,15 +29,14 @@
                 <ul>
                     <li><a href = "index.html">Sign Up</a></li>
                     <li><a href = "routes.html" class = "active">Routes</a></li>
-                    <li><a href = "signin.html">Sign In</a></li>
-                    <li><a href = "profile.html">Profile</a></li>
                 </ul>
         </nav>   
  
-        <div class = "rContainer" onclick="changeSlides(1)">
+        <div class = "rContainer" >
             
             <div class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 1</h1></div>
+                    <div class = "shaded"><h1 class = "titles" onclick=>Bus 1</h1></div>
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
                     <ul class = "routes fadeIn animated">
                     <li>Stop #1: All Along Hartland Commons</li>
                     <li>Stop #2: Finnigans Ln & Sassafras</li>
@@ -68,7 +65,8 @@
                 </div>
 
                 <div id = "busTwo" class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 2</h1></div>
+                    <div class = "shaded"><h1 class = "titles">Bus 2</h1></div>
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
                     <ul class = "routes fadeIn animated">
                         <li>Stop #1: Pardun & Leary</li>
                         <li>Stop #2: Lenox & Stelle</li>
@@ -97,7 +95,8 @@
                 </div>
 
                 <div id = "busThree" class="slideB">
-                    <div class = "shaded"><h1 class = "titles" onclick="changeSlides(1)">Bus 3</h1></div>
+                    <div class = "shaded"><h1 class = "titles">Bus 3</h1></div>   
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
                     <ul class = "routes fadeIn animated">
                             <li>Stop #1: Adams Ln (both sides)</li>
                             <li>Stop #2: Adams & Eden</li>

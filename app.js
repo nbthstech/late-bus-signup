@@ -28,12 +28,15 @@ function checkResponse(val) {
     }
 
     if(val=='club') {
+        specifyInput.placeholder='Club Name';
         teacher.placeholder = "Club Adviser";
     }
     else if(val=='sport') {
+        specifyInput.placeholder='Sport Name';
         teacher.placeholder = "Coach";
     }
     else{
+        specifyInput.placeholder='Specify';
         teacher.placeholder = "Teacher";
     }
 }
