@@ -9,6 +9,9 @@ body {
 *:focus {
     outline: none;
 }
+.hidden {
+    display:none;
+}
 
 #content {
     background:white;   

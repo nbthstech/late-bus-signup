@@ -66,3 +66,4 @@ function display(x) {
     amtSlides[x-1].style.display = "block";
 
 }  
+
