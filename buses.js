@@ -16,9 +16,14 @@ class Buses {
 	}
 	static init() {
 		gapi.load('auth2', function () {
+			console.log("init called")
 			gapi.auth2.init({
 				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
 				hosted_domain: 'nbtschools.org'
+			}).then(() => {
+				console.log("init finished")
+			}, () => {
+				console.log("init failed")
 			})
 		})
 	}
@@ -29,5 +34,9 @@ function onSignIn(googleUser) {
 	document.getElementById('ID').value = Buses.profile.getEmail().substring(0, Buses.profile.getEmail().indexOf('@'));
 	document.getElementById('Name').value = Buses.profile.getName();
 	document.getElementById('EMail').value = Buses.profile.getEmail();
+}
+
+function init() {
+	Buses.init()
 }
 //# sourceMappingURL=buses.js.map
