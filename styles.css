@@ -9,6 +9,9 @@ body {
 *:focus {
     outline: none;
 }
+.hidden {
+    display:none;
+}
 
 #content {
     background:white;   
@@ -217,7 +220,7 @@ body {
     padding-top:0;
     width:50%;
     text-align:center;
-    font-family: 'Courier', monospace;
+    font-family: 'Courier', Verdana;
     float:left;
 
 }

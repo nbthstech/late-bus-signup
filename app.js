@@ -66,3 +66,7 @@ function display(x) {
     amtSlides[x-1].style.display = "block";
 
 }  
+
+function sendAlert() {
+    alert('Submitted!');
+}
