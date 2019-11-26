@@ -70,6 +70,6 @@ function display(x) {
 function sendAlert() {
     var x = document.getElementsByTagName("form");
     x[0].submit();// Form submission
-    x[0].reset(); //Form clear
-    alert('You have submitted!');
+    alert('You have submitted!'); 
 }
+
