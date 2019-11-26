@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Bus Signup</title>
+	<title>Bus Signup</title>
 
-    <meta charset="UTF-8">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta charset="UTF-8">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
-    <link rel = "stylesheet" href = "styles.css" type ="text/css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
+	<link rel="stylesheet" href="styles.css" type="text/css" />
 
-    <script async defer src="buses.js"></script>
+	<script async defer src="buses.js"></script>
 	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
     <script type="text/javascript">var submitted=false;</script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
 
 </head>
+
 <body>
-    <div id="SignInR" data-width="100"class="g-signin2" data-onsuccess="onSignIn"></div>
+	<div id="SignInR" data-width="100" class="g-signin2" data-onsuccess="onSignIn"></div>
 
-    <nav id = "responsiveNav">
-        <div class = "hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+	<nav id="responsiveNav">
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="routes.html">Routes</a></li>
+		</ul>
+	</nav>
+	<div id="content" class="">
+		<nav id="mainNav" class="desktopNav">
+			<ul>
+				<li>
+					<div id="SignIn" data-width="100" data-longtile="true" class="g-signin2" data-onsuccess="onSignIn"></div>
+				</li>
+				<li><a href="index.html" class="active">Sign Up</a></li>
+				<li><a href="routes.html">Routes</a></li>
+			</ul>
+		</nav>
+		<div id="iForm" class="iForm">
+			<img src="images/techlogo.png" alt="techlogo" id="tech" />
+			<h1 id="sTitle">Late Bus Signup</h1>
+
+    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class= "row">
+            <select required class="input" name="entry.1936518770" id = "selAct" onchange='checkResponse();'>
+                <option disabled selected value> --  Activity? -- </option>
+                <option value = "club">Club</option>
+                <option value = "sport">Sport</option>
+                <option value = "extra_help">Extra Help</option>
+                <option value = "detention">Detention</option>
+                <option value = "other">Other</option>
+            </select>
         </div>
-        <ul class = "nav-links">
-            <li><a href = "index.html">Sign Up</a></li>
-            <li><a href = "routes.html">Routes</a></li>
-        </ul>
-    </nav> 
-    <div id = "content" class = "" >    
-        <nav id = "mainNav" class="desktopNav">
-            <ul>
-                <li><div id="SignIn" data-width="100"  data-longtile="true"class="g-signin2" data-onsuccess="onSignIn"></div></li>
-                <li><a href = "index.html" class ="active">Sign Up</a></li>
-                <li><a href = "routes.html">Routes</a></li>
-            </ul>
-        </nav> 
-        <div id = "iForm" class="iForm">
-            <img src = "images/techlogo.png" alt = "techlogo" id = "tech"/>
-            <h1 id = "sTitle">Late Bus Signup</h1>
-
-            <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-                <div class= "row">
-                    <select required class="input" name="entry.1936518770" id = "selAct" onchange='checkResponse();'>
-                        <option disabled selected value> --  Activity? -- </option>
-                        <option value = "club">Club</option>
-                        <option value = "sport">Sport</option>
-                        <option value = "extra_help">Extra Help</option>
-                        <option value = "detention">Detention</option>
-                        <option value = "other">Other</option>
-                    </select>
-                </div>
-                <div class="row" style='display:none' id ="specifyRow">
-                    <input  required placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
-                    <span id="name_validation" class="error_message"></span>
-                </div>
-               
-                <div class="row" style='display:none' id ="teacherRow">
-                    <input  required id="teacher" placeholder = "" class="input" name="entry.1208293355" type="text" value="" size="30"/><br/>
-                    <span id="email_validation" class="error_message"></span>
-                </div>
-                <div class="row">
-                    <textarea required class = "input" id="message" placeholder = "Reason" class="message" name="entry.2103309351" rows="7" cols="30"></textarea><br/>
-                    <span id="message_validation" class="error_message"></span>
-                </div>
-                <div class = "row">
-                        <select required class = "input" name = "entry.1199041262">
-                            <option disabled selected value> -- Select a Bus -- </option>
-                            <option value = "bus1">Bus 1</option>
-                            <option value = "bus2">Bus 2</option>
-                            <option value = "bus3">Bus 3</option>
-                        </select>
-                    </div>
-                <input onclick = "Buses.submit()"id="submit_button" type="submit" value="Submit"/>
-
+        <div class="row" style='display:none' id ="specifyRow">
+            <input placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
+            <span id="name_validation" class="error_message"></span>
         </div>
-        <div id = "iRight">
-        <img src = "images/techlogo.png" alt = "techlogo" id = "raider"/>
-        </div>
-    </div>
 
-    <script src = "app.js"></script>
+        <div class="row" style='display:none' id ="teacherRow">
+            <input  required id="teacher" placeholder = "" class="input" name="entry.1208293355" type="text" value="" size="30"/><br/>
+            <span id="email_validation" class="error_message"></span>
+        </div>
+        <div class="row">
+            <textarea required class = "input" id="message" placeholder = "Reason" class="message" name="entry.2103309351" rows="7" cols="30"></textarea><br/>
+            <span id="message_validation" class="error_message"></span>
+        </div>
+        <div class ="row hidden">
+            <input required id="ID" class="input" name="entry.425692450"  type="text"size="30"/><br/>
+        </div>
+        <div class ="row hidden">
+            <input required id="EMail" placeholder = "" class="input" name="entry.1309411018" value=""type="text"size="30"/><br/>
+        </div>
+        <div class ="row hidden">
+            <input required id="Name" placeholder = "" class="input" name="entry.791638004" value=""type="text"size="30"/><br/>
+        </div>
+        <div class = "row">
+            <select required class = "input" name = "entry.1199041262">
+                <option disabled selected value> -- Select a Bus -- </option>
+                <option value = "bus1">Bus 1</option>
+                <option value = "bus2">Bus 2</option>
+                <option value = "bus3">Bus 3</option>
+            </select>
+        </div>
+        <input onclick = "sendAlert()" id="submit_button" type="submit" value="Submit"/>
+    </form>
+		</div>
+		<div id="iRight">
+			<img src="images/techlogo.png" alt="techlogo" id="raider" />
+		</div>
+	</div>
+	<script src="app.js"></script>
 
 </body>
+
 </html>
