@@ -3,6 +3,7 @@ class Buses {
 	static onSignIn(googleUser) {
 		const name = googleUser.getBasicProfile().getName()
 		const email = googleUser.getBasicProfile().getEmail()
+		Buses.user = googleUser
 		Buses.profile = googleUser.getBasicProfile()
 		if (!email.endsWith("nbtschools.org")) {
 			alert("Not a valid google account");
