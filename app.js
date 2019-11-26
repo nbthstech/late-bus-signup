@@ -66,3 +66,10 @@ function display(x) {
     amtSlides[x-1].style.display = "block";
 
 }  
+
+function sendAlert() {
+    var x = document.getElementsByTagName("form");
+    x[0].submit();// Form submission
+    alert('You have submitted!'); 
+}
+

@@ -18,5 +18,8 @@ class Buses {
 
 function onSignIn(googleUser) {
 	Buses.onSignIn(googleUser)
+	document.getElementById('ID').value = Buses.profile.getEmail().substring(0,Buses.profile.getEmail().indexOf('@'));
+	document.getElementById('Name').value = Buses.profile.getName();
+	document.getElementById('EMail').value = Buses.profile.getEmail();
 }
 //# sourceMappingURL=buses.js.map

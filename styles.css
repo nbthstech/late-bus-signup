@@ -9,6 +9,9 @@ body {
 *:focus {
     outline: none;
 }
+.hidden {
+    display:none;
+}
 
 #content {
     background:white;   
@@ -217,7 +220,7 @@ body {
     padding-top:0;
     width:50%;
     text-align:center;
-    font-family: 'Courier', monospace;
+    font-family: 'Courier', Verdana;
     float:left;
 
 }
@@ -262,6 +265,7 @@ body {
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: Verdana, sans-serif;
 
 }
 #raider {
