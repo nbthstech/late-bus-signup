@@ -5,7 +5,7 @@ class Buses {
 		const email = googleUser.getBasicProfile().getEmail()
 		Buses.user = googleUser
 		Buses.profile = googleUser.getBasicProfile()
-		if (!(Buses.profile.getHostedDomain() === "nbtschools.org")) {
+		if (!(Buses.user.getHostedDomain() === "nbtschools.org")) {
 			alert("Not a valid google account");
 			document.cookie = "isValid=false"
 			document.getElementById("submit_button").hidden = true;
