@@ -13,10 +13,11 @@
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 
 	<script async defer src="buses.js"></script>
-	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
-    <script type="text/javascript">var submitted=false;</script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+	<script async defer src="https://apis.google.com/js/platform.js?onload=Buses.init"></script>
+	<script type="text/javascript">var submitted = false;</script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
 
 </head>
+
 <body>
 	<div id="SignInR" data-width="100" class="g-signin2" data-onsuccess="onSignIn"></div>
 
@@ -45,50 +46,50 @@
 			<img src="images/techlogo.png" alt="techlogo" id="tech" />
 			<h1 id="sTitle">Late Bus Signup</h1>
 
-    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-        <div class= "row">
-            <select required class="input" name="entry.1936518770" id = "selAct" onchange='checkResponse();'>
-                <option disabled selected value> --  Activity? -- </option>
-                <option value = "club">Club</option>
-                <option value = "sport">Sport</option>
-                <option value = "extra_help">Extra Help</option>
-                <option value = "detention">Detention</option>
-                <option value = "other">Other</option>
-            </select>
-        </div>
-        <div class="row" style='display:none' id ="specifyRow">
-            <input placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
-            <span id="name_validation" class="error_message"></span>
-        </div>
+			<form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="row">
+					<select required class="input" name="entry.1936518770" id="selAct" onchange='checkResponse();'>
+						<option disabled selected value> -- Activity? -- </option>
+						<option value="club">Club</option>
+						<option value="sport">Sport</option>
+						<option value="extra_help">Extra Help</option>
+						<option value="detention">Detention</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="row" style='display:none' id="specifyRow">
+					<input placeholder="" id="specify" class="input" name="entry.730515673" type="text" value="" size="30" /><br />
+					<span id="name_validation" class="error_message"></span>
+				</div>
 
-        <div class="row" style='display:none' id ="teacherRow">
-            <input  required id="teacher" placeholder = "" class="input" name="entry.1208293355" type="text" value="" size="30"/><br/>
-            <span id="email_validation" class="error_message"></span>
-        </div>
-        <div class="row">
-            <textarea required class = "input" id="message" placeholder = "Reason" class="message" name="entry.2103309351" rows="7" cols="30"></textarea><br/>
-            <span id="message_validation" class="error_message"></span>
-        </div>
-        <div class ="row hidden">
-            <input required id="ID" class="input" name="entry.425692450"  type="text"size="30"/><br/>
-        </div>
-        <div class ="row hidden">
-            <input required id="EMail" placeholder = "" class="input" name="entry.1309411018" value=""type="text"size="30"/><br/>
-        </div>
-        <div class ="row hidden">
-            <input required id="Name" placeholder = "" class="input" name="entry.791638004" value=""type="text"size="30"/><br/>
+				<div class="row" style='display:none' id="teacherRow">
+					<input required id="teacher" placeholder="" class="input" name="entry.1208293355" type="text" value="" size="30" /><br />
+					<span id="email_validation" class="error_message"></span>
+				</div>
+				<div class="row">
+					<textarea required class="input" id="message" placeholder="Reason" class="message" name="entry.2103309351" rows="7" cols="30"></textarea><br />
+					<span id="message_validation" class="error_message"></span>
+				</div>
+				<div class="row hidden">
+					<input required id="ID" class="input" name="entry.425692450" type="text" size="30" /><br />
+				</div>
+				<div class="row hidden">
+					<input required id="EMail" placeholder="" class="input" name="entry.1309411018" value="" type="text" size="30" /><br />
+				</div>
+				<div class="row hidden">
+					<input required id="Name" placeholder="" class="input" name="entry.791638004" value="" type="text" size="30" /><br />
 
-        </div>
-        <div class = "row">
-            <select required class = "input" name = "entry.1199041262">
-                <option disabled selected value> -- Select a Bus -- </option>
-                <option value = "bus1">Bus 1</option>
-                <option value = "bus2">Bus 2</option>
-                <option value = "bus3">Bus 3</option>
-            </select>
-        </div>
-        <input onclick = "sendAlert()" id="submit_button" type="submit" value="Submit"/>
-    </form>
+				</div>
+				<div class="row">
+					<select required class="input" name="entry.1199041262">
+						<option disabled selected value> -- Select a Bus -- </option>
+						<option value="bus1">Bus 1</option>
+						<option value="bus2">Bus 2</option>
+						<option value="bus3">Bus 3</option>
+					</select>
+				</div>
+				<input onclick="sendAlert()" id="submit_button" type="submit" value="Submit" />
+			</form>
 		</div>
 		<div id="iRight">
 			<img src="images/techlogo.png" alt="techlogo" id="raider" />
