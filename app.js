@@ -72,3 +72,4 @@ function sendAlert() {
     x[0].submit();// Form submission
     alert('You have submitted!'); 
 }
+
