@@ -1,3 +1,3 @@
 # late-bus-signup
-Alan Wang is the best!!
+A project that we will work on in Tech Club to help students sign up for the late bus.
 
