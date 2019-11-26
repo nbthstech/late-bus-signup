@@ -16,6 +16,7 @@ class Buses {
 	}
 	static init() {
 		gapi.load('auth2', function () {
+			const guath = gapi.auth2.getAuthInstance()
 			console.log("init called")
 			gapi.auth2.init({
 				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
@@ -26,6 +27,7 @@ class Buses {
 				console.log("init failed")
 			})
 		})
+
 	}
 }
 
