@@ -25,63 +25,125 @@
 </head>
 
 <body>
-	<img src="images/techlogo.png" alt="techlogo" id="tech" />
-	<nav id="responsiveNav">
-		<div class="hamburger">
-			<div class="line"></div>
-			<div class="line"></div>
-			<div class="line"></div>
-		</div>
-		<ul class="nav-links">
-			<li><a href="index.html">Sign Up</a></li>
-			<li><a href="routes.html">Routes</a></li>
-			<li><a href="signin.html">Sign In</a></li>
-			<li><a href="profile.html">Profile</a></li>
-		</ul>
-	</nav>
+    <img src = "images/techlogo.png" alt = "techlogo" id = "tech"/>
+    <nav id = "responsiveNav">
+        <div class = "hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class = "nav-links">
+            <li><a href = "index.html">Sign Up</a></li>
+            <li><a href = "routes.html">Routes</a></li>
+        </ul>
+    </nav> 
+  
+    <div id = "content">
+        <nav id = "rNav" class="desktopNav">
+                <ul>
+                    <li><a href = "index.html">Sign Up</a></li>
+                    <li><a href = "routes.html" class = "active">Routes</a></li>
+                </ul>
+        </nav>   
+ 
+        <div class = "rContainer" >
+            
+            <div class="slideB">
+                    <div class = "shaded"><h1 class = "titles" onclick=>Bus 1</h1></div>
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
+                    <ul class = "routes fadeIn animated">
+                    <li>Stop #1: All Along Hartland Commons</li>
+                    <li>Stop #2: Finnigans Ln & Sassafras</li>
+                    <li>Stop #3: Finnigans Ln & Gwyn</li>
+                    <li>Stop #4: Finnigans Ln & Petunia</li>
+                    <li>Stop #5: Thomas & Tulip</li>
+                    <li>Stop #6: Shawn Ct.</li>
+                    <li>Stop #7: Todd Circle</li>
+                    <li>Stop #8: Broadway & Harold</li>
+                    <li>Stop #9: 2378 Rt 27</li>
+                    <li>Stop #10: Ruth Rd. @ Lincoln Apts</li>
+                    <li>Stop #11: Parkside & West Lake</li>
+                    <li>Stop #12: Hidden Lake & Riverbend</li>
+                    <li>Stop #13: Schmidt Ln & Wedgewood</li>
+                    <li>Stop #14: Schmidt Ln & Bel Court</li>
+                    <li>Stop #15: Nathan & Schmidt Ln</li>
+                    <li>Stop #16: Nathan & Willowbrook</li>
+                    <li>Stop #17: Willowbrook & Hidden Lake</li>
+                    <li>Stop #18: Hidden Lake & Aaron</li>
+                    <li>Stop #19: Aaron & Linder</li>
+                    <li>Stop #20: Aaron & Garfield</li>
+                    <li>Stop #21: Aaron & Thatchwood</li>
+                    <li>Stop #22: Edwin & Truman</li>
+                    <li>Stop #23: Divison & Green St</li>
+                    </ul>
+                </div>
 
-	<div id="content">
-		<nav id="rNav" class="desktopNav">
-			<ul>
-				<li><a href="index.html">Sign Up</a></li>
-				<li><a href="routes.html" class="active">Routes</a></li>
-				<li><a href="signin.html">Sign In</a></li>
-				<li><a href="profile.html">Profile</a></li>
-			</ul>
-		</nav>
+                <div id = "busTwo" class="slideB">
+                    <div class = "shaded"><h1 class = "titles">Bus 2</h1></div>
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
+                    <ul class = "routes fadeIn animated">
+                        <li>Stop #1: Pardun & Leary</li>
+                        <li>Stop #2: Lenox & Stelle</li>
+                        <li>Stop #3: Chrome & 4th</li>
+                        <li>Stop #4: Chrome & Allgair</li>
+                        <li>Stop #5: Thomas & Jefferson</li>
+                        <li>Stop #6: Nassau & Willow</li>
+                        <li>Stop #7: Remsen & Hollywood</li>
+                        <li>Stop #8: Linwood & Cleremont</li>
+                        <li>Stop #9: Linwood School</li>
+                        <li>Stop #10: Linwood & Cranbury Crossroads</li>
+                        <li>Stop #11: Ridgewood & Newton</li>
+                        <li>Stop #12: Fleetwood & Livingston</li>
+                        <li>Stop #13: Newton & Patton</li>
+                        <li>Stop #14: LaRose St. & Delaware</li>
+                        <li>Stop #15: Oaktree Dr</li>
+                        <li>Stop #16: Omaha & Redmond</li>
+                        <li>Stop #17: Axel & Huron</li>
+                        <li>Stop #18: Axel & Seneca</li>
+                        <li>Stop #19: Axel & Carlise</li>
+                        <li>Stop #20: Axel & Poplar</li>
+                        <li>Stop #21: Princess & Orchard</li>
+                        <li>Stop #22: Arlington & Apache</li>
+                        <li>Stop #23: Jersey Ave</li>
+                    </ul>
+                </div>
 
-		<div class="rContainer" onclick="changeSlides(1)">
+                <div id = "busThree" class="slideB">
+                    <div class = "shaded"><h1 class = "titles">Bus 3</h1></div>   
+                    <div id="nextButton" onclick="changeSlides(1)">Next Bus</div>
+                    <ul class = "routes fadeIn animated">
+                            <li>Stop #1: Adams Ln (both sides)</li>
+                            <li>Stop #2: Adams & Eden</li>
+                            <li>Stop #3: Dillon Ct.</li>
+                            <li>Stop #4: Rennaissance & Timber Ridge</li>
+                            <li>Stop #5: Renaissance & Pin Oak</li>
+                            <li>Stop #6: Renaissance & Lisa</li>
+                            <li>Stop #7: Renaissance & Beacon Hill</li>
+                            <li>Stop #8: Renaissance & Springfield</li>
+                            <li>Stop #9: Renaissance & N-E Intersection</li>
+                            <li>Stop #10: Renaissance & Azalea</li>
+                            <li>Stop #11: Renaissance & Lindsay</li>
+                            <li>Stop #12: Morris & Eagle</li>
+                            <li>Stop #13: Morris & Palmetto</li>
+                            <li>Stop #14: Morris & Marc</li>
+                            <li>Stop #15: Deerbrook & Clubhouse</li>
+                            <li>Stop #16: Deerbrook & Clubhouse</li>
+                            <li>Stop #17: Church lane (both wways)</li>
+                            <li>Stop #18: Lake Dr. & Old Georges Rd</li>
+                            <li>Stop #19: Old Georges & Pine Meadow</li>
+                            <li>Stop #20: Old Georges & Golden Valley</li>
+                            <li>Stop #21: Old Georges & Peppermint Hill</li>
+                            <li>Stop #22: Wood & Miriam</li>
+                            <li>Stop #23: Edlys & Miriam</li>
+                            <li>Stop #24: Farrington & Hoover</li>
+                            <li>Stop #25: Mount Dr</li>
+                    </ul>
+                </div>
+            </div>
+            <div id = "rRight">
+                <img src = "images/map.png" alt = "nb map" id = "nbMap"/>
+            </div>
 
-			<div class="slideB">
-				<div class="shaded">
-					<h1 class="titles" onclick="changeSlides(1)">Bus 1</h1>
-				</div>
-				<ul class="routes fadeIn animated">
-					<li>Stop #1: All Along Hartland Commons</li>
-					<li>Stop #2: Finnigans Ln & Sassafras</li>
-					<li>Stop #3: Finnigans Ln & Gwyn</li>
-					<li>Stop #4: Finnigans Ln & Petunia</li>
-					<li>Stop #5: Thomas & Tulip</li>
-					<li>Stop #6: Shawn Ct.</li>
-					<li>Stop #7: Todd Circle</li>
-					<li>Stop #8: Broadway & Harold</li>
-					<li>Stop #9: 2378 Rt 27</li>
-					<li>Stop #10: Ruth Rd. @ Lincoln Apts</li>
-					<li>Stop #11: Parkside & West Lake</li>
-					<li>Stop #12: Hidden Lake & Riverbend</li>
-					<li>Stop #13: Schmidt Ln & Wedgewood</li>
-					<li>Stop #14: Schmidt Ln & Bel Court</li>
-					<li>Stop #15: Nathan & Schmidt Ln</li>
-					<li>Stop #16: Nathan & Willowbrook</li>
-					<li>Stop #17: Willowbrook & Hidden Lake</li>
-					<li>Stop #18: Hidden Lake & Aaron</li>
-					<li>Stop #19: Aaron & Linder</li>
-					<li>Stop #20: Aaron & Garfield</li>
-					<li>Stop #21: Aaron & Thatchwood</li>
-					<li>Stop #22: Edwin & Truman</li>
-					<li>Stop #23: Divison & Green St</li>
-				</ul>
-			</div>
 
 			<div id="busTwo" class="slideB">
 				<div class="shaded">

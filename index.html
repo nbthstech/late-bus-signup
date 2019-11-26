@@ -15,7 +15,8 @@
 	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
 </head>
 <body>
-    <img src = "images/techlogo.png" alt = "techlogo" id = "tech"/>
+    <div id="SignInR" data-width="100"class="g-signin2" data-onsuccess="onSignIn"></div>
+
     <nav id = "responsiveNav">
         <div class = "hamburger">
             <div class="line"></div>
@@ -25,8 +26,6 @@
         <ul class = "nav-links">
             <li><a href = "index.html">Sign Up</a></li>
             <li><a href = "routes.html">Routes</a></li>
-            <li><a href = "signin.html">Sign In</a></li>
-            <li><a href = "profile.html">Profile</a></li>
         </ul>
     </nav> 
     <div id = "content" class = "" >    
@@ -35,11 +34,10 @@
                 <li><div id="SignIn" data-width="100"  data-longtile="true"class="g-signin2" data-onsuccess="onSignIn"></div></li>
                 <li><a href = "index.html" class ="active">Sign Up</a></li>
                 <li><a href = "routes.html">Routes</a></li>
-                <li><a href = "signin.html">Sign In</a></li>
-                <li><a href = "profile.html">Profile</a></li>
             </ul>
         </nav> 
         <div id = "iForm" class="iForm">
+            <img src = "images/techlogo.png" alt = "techlogo" id = "tech"/>
             <h1 id = "sTitle">Late Bus Signup</h1>
 
             <form >
@@ -54,8 +52,7 @@
                     </select>
                 </div>
                 <div class="row" style='display:none' id ="specifyRow">
-                    <input  required placeholder = "Specify"id="specify" class="input" name="" type="text" value="" size="30"/><br/>
-        
+                    <input  required placeholder = ""id="specify" class="input" name="" type="text" value="" size="30"/><br/>
                     <span id="name_validation" class="error_message"></span>
                 </div>
                
@@ -79,11 +76,9 @@
 
         </div>
         <div id = "iRight">
-                <img src = "images/techlogo.png" alt = "techlogo" id = "raider"/>
-            </div>
-
-
-
+        <img src = "images/techlogo.png" alt = "techlogo" id = "raider"/>
+        </div>
+    </div>
 
     <script src = "app.js"></script>
 
