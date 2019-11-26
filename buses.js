@@ -14,8 +14,6 @@ class Buses {
 				} else {
 					document.cookie = "isValid=true"
 				}
-				const divButton = document.getElementById("SignIn");
-				divButton.hidden = true;
 			});
 		});
 
