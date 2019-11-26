@@ -330,8 +330,12 @@ body {
         margin-top:5%;
         position:absolute;
         display:block;
+        
     }
     
+    #responsiveNav {
+        width:10%; 
+    }
     .line {
         width:30px;
         height:3px;
