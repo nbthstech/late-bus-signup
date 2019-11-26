@@ -69,4 +69,6 @@ function display(x) {
 
 function sendAlert() {
     alert('Submitted!');
+    var x = document.getElementsByTagName("form");
+    x[0].submit();// Form submission
 }
