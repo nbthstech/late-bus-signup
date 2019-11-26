@@ -1,7 +1,6 @@
 "use strict";
 class Buses {
 	static onSignIn(googleUser) {
-		alert("SignedIn");
 		gapi.client.load('oauth2', 'v2', function () {
 			const request = gapi.client.oauth2.userinfo.get({
 				'userId': 'me'
