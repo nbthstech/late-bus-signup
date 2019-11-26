@@ -58,7 +58,7 @@
                     </select>
                 </div>
                 <div class="row" style='display:none' id ="specifyRow">
-                    <input  required placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
+                    <input placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
                     <span id="name_validation" class="error_message"></span>
                 </div>
                
@@ -72,22 +72,15 @@
                 </div>
                 <div class ="row hidden">
                     <input required id="ID" class="input" name="entry.425692450"  type="text"size="30"/><br/>
-                    <script>
-                        document.getElementById('ID').value = Buses.profile.getEmail().substring(0,Buses.profile.getEmail().indexOf('@'));
-                    </script>
+       
                 </div>
                 <div class ="row hidden">
                     <input required id="Name" placeholder = "" class="input" name="entry.791638004" value=""type="text"size="30"/><br/>
-                    <script>
-                        document.getElementById('Name').value = Buses.profile.getName();
-                    </script>
+       
                 </div>
                 <div class ="row hidden">
                     <input required id="EMail" placeholder = "" class="input" name="entry.1309411018" value=""type="text"size="30"/><br/>
-                    <script>
-                         document.getElementById('EMail').value = Buses.profile.getEmail();
-                         console.log(document.getElementById('EMail').value);
-                    </script>
+         
                 </div>
                 <div class = "row">
                     <select required class = "input" name = "entry.1199041262">
@@ -97,7 +90,7 @@
                         <option value = "bus3">Bus 3</option>
                     </select>
                 </div>
-                <input onclick = "Buses.submit()"id="submit_button" type="submit" value="Submit"/>
+                <input onclick = "sendAlert()" id="submit_button" type="submit" value="Submit"/>
             </form>
 		</div>
 		<div id="iRight">

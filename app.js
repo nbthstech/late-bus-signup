@@ -67,3 +67,6 @@ function display(x) {
 
 }  
 
+function sendAlert() {
+    alert('Submitted!');
+}
