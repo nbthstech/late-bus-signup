@@ -266,6 +266,7 @@ body {
 }
 #raider {
     max-width:50%;
+    margin: 50px auto;
     padding-top:10%;
     padding-left:20%;
 }
