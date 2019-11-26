@@ -10,7 +10,6 @@ class Buses {
 				// resp.given_name + resp.id + resp.name + resp.email
 				if (!resp.email.endsWith("nbtschools.org")) {
 					alert("Not a valid google account");
-					throw new Error("Not a valid google account");
 					document.cookie = "isValid=false"
 				} else {
 					document.cookie = "isValid=true"
