@@ -7,10 +7,10 @@ class Buses {
 		if (!email.endsWith("nbtschools.org")) {
 			alert("Not a valid google account");
 			document.cookie = "isValid=false"
-			document.getElementById("submit").hidden = true;
+			document.getElementById("submit_button").hidden = true;
 		} else {
 			document.cookie = "isValid=true"
-			document.getElementById("submit").hidden = false;
+			document.getElementById("submit_button").hidden = false;
 		}
 	}
 }
