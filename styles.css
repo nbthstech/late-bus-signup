@@ -265,10 +265,12 @@ body {
     background-image:linear-gradient(to left, rgb(107, 107, 202),rgb(83, 83, 216));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: Verdana, sans-serif;
 
 }
 #raider {
     max-width:50%;
+    margin: 50px auto;
     padding-top:10%;
     padding-left:20%;
 }
