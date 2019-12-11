@@ -69,7 +69,27 @@ function display(x) {
 
 function sendAlert() {
     var x = document.getElementsByTagName("form");
+
     x[0].submit();// Form submission
-    alert('You have submitted!'); 
+    var selection = document.getElementById('selAct').value;
+    if(selection == "club" || selection == 'sport' || selection == 'other'){
+        if(document.getElementById('specify').value != ""
+        && document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
+        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
+        && document.getElementById('pickBus').value != "") {
+            alert('You have submitted!'); 
+        }
+    }
+    else if(selection == "extra_help" || selection == "detention"){
+        if(document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
+        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
+        && document.getElementById('pickBus').value != "") {
+            alert('You have submitted!'); 
+        }
+    }
+
+    else {
+        alert('Invalid submission.');
+    }
 }
 
