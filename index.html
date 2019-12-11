@@ -13,12 +13,14 @@
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 
 	<script async defer src="buses.js"></script>
-	<script async defer src="https://apis.google.com/js/platform.js?onload=init"></script>
-    <script type="text/javascript">var submitted=false;</script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
+	<script async defer src="https://apis.google.com/js/platform.js"></script>
+	<script type="text/javascript">var submitted = false;</script> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='index.html';}"></iframe>
 
 </head>
+
 <body>
-	<div id="SignInR" data-width="100" class="g-signin2" data-onsuccess="onSignIn"></div>
+	<div id="SignInR" data-width="100" data-longtile="true" class="g-signin2" data-onsuccess="onSignIn"></div>
+
 
 	<nav id="responsiveNav">
 		<div class="hamburger">
@@ -45,21 +47,21 @@
 			<img src="images/techlogo.png" alt="techlogo" id="tech" />
 			<h1 id="sTitle">Late Bus Signup</h1>
 
-    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-        <div class= "row">
-            <select required class="input" name="entry.1936518770" id = "selAct" onchange='checkResponse();'>
-                <option disabled selected value> --  Activity? -- </option>
-                <option value = "club">Club</option>
-                <option value = "sport">Sport</option>
-                <option value = "extra_help">Extra Help</option>
-                <option value = "detention">Detention</option>
-                <option value = "other">Other</option>
-            </select>
-        </div>
-        <div class="row" style='display:none' id ="specifyRow">
-            <input placeholder = ""id="specify" class="input" name="entry.730515673" type="text" value="" size="30"/><br/>
-            <span id="name_validation" class="error_message"></span>
-        </div>
+			<form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfArCuLPIYbtwh4gwIwXNps_Ya7_kq78GK6LCbYyeB6jue9zQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="row">
+					<select required class="input" name="entry.1936518770" id="selAct" onchange='checkResponse();'>
+						<option disabled selected value> -- Activity? -- </option>
+						<option value="club">Club</option>
+						<option value="sport">Sport</option>
+						<option value="extra_help">Extra Help</option>
+						<option value="detention">Detention</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div class="row" style='display:none' id="specifyRow">
+					<input placeholder="" id="specify" class="input" name="entry.730515673" type="text" value="" size="30" /><br />
+					<span id="name_validation" class="error_message"></span>
+				</div>
 
         <div class="row" style='display:none' id ="teacherRow">
             <input  required id="teacher" placeholder = "" class="input" name="entry.1208293355" type="text" value="" size="30"/><br/>
