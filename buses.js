@@ -13,6 +13,8 @@ class Buses {
 			document.cookie = "isValid=true"
 			document.getElementById("submit_button").hidden = false;
 		}
+		document.getElementById("submit_button").disabled = false;
+
 	}
 	static init() {
 		gapi.load('auth2', function () {
