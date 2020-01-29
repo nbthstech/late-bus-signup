@@ -39,14 +39,6 @@
 					<div id="SignIn" data-width="100" data-longtile="true" class="g-signin2" data-onsuccess="onSignIn"></div>
 				</li>
 				<li>
-					<script>
-						function signOut() {
-							var auth2 = gapi.auth2.getAuthInstance();
-							auth2.signOut().then(function () {
-								console.log('User signed out.');
-							});
-						}
-					</script>
 					<a href="#" onclick="signOut();">Sign out</a>
 				</li>
 				<li><a href="index.html" class="active">Sign Up</a></li>
