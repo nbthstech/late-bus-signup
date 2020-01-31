@@ -9,7 +9,7 @@ hamburger.addEventListener('click', ()=>{
 
 
 
-function checkResponse(val) {
+function checkResponse() {
     const dropdown = document.querySelector('#selAct');
 	const val = dropdown.value;
 	const specifyInput = document.getElementById('specify');
@@ -68,23 +68,39 @@ function display(x) {
 }  
 
 function sendAlert() {
-    var x = document.getElementsByTagName("form");
+    var x = document.getElementsByTagName("form")
 
-    x[0].submit();// Form submission
-    var selection = document.getElementById('selAct').value;
-    if(selection == "club" || selection == 'sport' || selection == 'other'){
-        if(document.getElementById('specify').value != ""
-        && document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
-        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
-        && document.getElementById('pickBus').value != "") {
-            alert('You have submitted!'); 
+    // Form submission
+	var selection = document.getElementById('selAct').value;
+	if (isValid() && (["club", "sport", "other"].includes(selection))){
+		if (
+			document.getElementById('specify').value != "" &&
+			document.getElementById('teacher').value != "" &&
+			document.getElementById('ID').value != "" &&
+			document.getElementById('EMail').value != "" &&
+			document.getElementById('Name').value != "" &&
+			document.getElementById('pickBus').value != ""
+		) {
+			x[0].submit()
+			alert('You have submitted!')
+			if (!isMobile()) {
+				signOut()
+			} 
         }
     }
-    else if(selection == "extra_help" || selection == "detention"){
-        if(document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
-        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
-        && document.getElementById('pickBus').value != "") {
-            alert('You have submitted!'); 
+	else if (isValid() && (["extra_help", "detention"].includes(selection))){
+		if (
+			document.getElementById('teacher').value != "" &&
+			document.getElementById('ID').value != "" &&
+			document.getElementById('EMail').value != "" &&
+			document.getElementById('Name').value != "" &&
+			document.getElementById('pickBus').value != ""
+		) {
+			x[0].submit()
+			alert('You have submitted!')
+			if (!isMobile()) {
+				signOut()
+			} 
         }
     }
 
@@ -92,9 +108,7 @@ function sendAlert() {
         alert('Invalid submission.');
     }
 
-    if(!isMobile()) {
-        signOut();
-    } 
+    
 
 }
 
