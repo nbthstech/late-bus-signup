@@ -81,11 +81,12 @@ function setCookie(cname, cvalue, exdays) {
 
 function getCookie(cname) {
 	const name = cname + "="
-	return (decodeURIComponent(document.cookie)
+	const cookie = (decodeURIComponent(document.cookie)
 		.split(';')
 		.map(str => str.trim())
-		.filter(str => str.startsWith(name))[0]
-		.substring(name.length))
+		.filter(str => str.startsWith(name))[0])
+	const value = cookie === undefined || cookie === null ? "" : cookie.substring(name.length)
+	return value
 }
 
 function init() {
