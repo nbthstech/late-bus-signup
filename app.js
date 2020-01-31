@@ -10,12 +10,12 @@ hamburger.addEventListener('click', ()=>{
 
 
 function checkResponse(val) {
-    var dropdown = document.querySelector('#selAct');
-    var val = dropdown.value;
-    var specifyInput = document.getElementById('specify');
-    var teacher = document.getElementById('teacher');
-    var specifyInputRow = document.getElementById('specifyRow');
-    var teacherRow = document.getElementById('teacherRow');
+    const dropdown = document.querySelector('#selAct');
+	const val = dropdown.value;
+	const specifyInput = document.getElementById('specify');
+	const teacher = document.getElementById('teacher');
+	const specifyInputRow = document.getElementById('specifyRow');
+	const teacherRow = document.getElementById('teacherRow');
     teacher.style.display='inline-block';
     teacherRow.style.display='block';
     if(val=='club' || val=='sport' || val=='other') {
