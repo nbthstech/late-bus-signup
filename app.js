@@ -92,7 +92,7 @@ function sendAlert() {
         alert('Invalid submission.');
     }
 
-    if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
+    if(!isMobile()) {
         signOut();
     } 
 
