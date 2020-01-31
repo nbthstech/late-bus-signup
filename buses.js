@@ -54,6 +54,10 @@ function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
 }
 
+function isValid() {
+	return getCookie("isValid")==="true"
+}
+
 function signOut() {
 	const auth2 = gapi.auth2.getAuthInstance()
 	auth2.signOut().then(function () {
@@ -69,10 +73,19 @@ function signOut() {
 	})
 }
 function setCookie(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	var expires = "expires=" + d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	const d = new Date()
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
+	const expires = "expires=" + d.toUTCString()
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
+}
+
+function getCookie(cname) {
+	const name = cname + "="
+	return (decodeURIComponent(document.cookie)
+		.split(';')
+		.map(str => str.trim())
+		.filter(str => str.startsWith(name))[0]
+		.substring(name.length))
 }
 
 function init() {
