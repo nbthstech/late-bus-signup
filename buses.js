@@ -37,6 +37,17 @@ function onSignIn(googleUser) {
 	document.getElementById('ID').value = Buses.profile.getEmail().substring(0, Buses.profile.getEmail().indexOf('@'));
 	document.getElementById('Name').value = Buses.profile.getName();
 	document.getElementById('EMail').value = Buses.profile.getEmail();
+
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+		document.getElementById("SignInR").style.display = "none";
+		document.getElementById("mobileSignOut").style.display="block";
+	} else {
+		document.getElementById("SignIn").style.display = "none";
+		document.getElementById("desktopSignIn").style.display ="block";
+	}
+
+
 }
 
 function init() {
