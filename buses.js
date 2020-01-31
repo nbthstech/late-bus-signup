@@ -6,12 +6,13 @@ class Buses {
 		Buses.user = googleUser
 		Buses.profile = googleUser.getBasicProfile()
 		if (!(Buses.user.getHostedDomain() === "nbtschools.org")) {
-			alert("Not a valid google account");
-			document.cookie = "isValid=false"
-			document.getElementById("submit_button").hidden = true;
+			alert("Not a valid google account")
+			setCookie("isValid", false, 1)
+			document.getElementById("submit_button").hidden = true
 		} else {
 			document.cookie = "isValid=true"
-			document.getElementById("submit_button").hidden = false;
+			setCookie("isValid", true, 1)
+			document.getElementById("submit_button").hidden = false
 		}
 
 	}
