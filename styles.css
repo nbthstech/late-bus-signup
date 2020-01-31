@@ -312,6 +312,28 @@ body {
 	display: none;
 }
 
+.signOut {
+	cursor:pointer;
+	width:100px;
+	height:25px;
+	box-shadow: 0.5px 0.5px 2px 1px #888888;
+	text-align:center;
+	border-radius:10px;
+	border-color:red;
+	color:gray;
+	padding-top:10%;
+	background-color:white;
+	display:none;	
+}
+#signOut:hover {
+	box-shadow: 1px 1.5px 2.5px 1.5px #5f7fca;
+
+}
+#signOutIco {
+	width:13%;
+}
+
+
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 75%;
@@ -319,12 +341,22 @@ body {
 	.desktopNav {
 		display: none;
 	}
+	.signOut {
+		margin-top: 5%;
+		position: absolute;
+		display: block;
+		z-index: 1;
+		padding-top:2%;
+		display:none;
+	}
+
 	#SignInR {
 		margin-top: 5%;
 		position: absolute;
 		display: block;
 		z-index: 1;
 	}
+
 	.line {
 		width: 30px;
 		height: 3px;

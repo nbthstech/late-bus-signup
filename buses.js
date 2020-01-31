@@ -37,13 +37,42 @@ function onSignIn(googleUser) {
 	document.getElementById('ID').value = Buses.profile.getEmail().substring(0, Buses.profile.getEmail().indexOf('@'));
 	document.getElementById('Name').value = Buses.profile.getName();
 	document.getElementById('EMail').value = Buses.profile.getEmail();
+
+
+	if( isMobile() ) {
+		document.getElementById("SignInR").style.display = "none";
+		document.getElementById("mobileSignOut").style.display="block";
+	} else {
+		document.getElementById("SignIn").style.display = "none";
+		document.getElementById("desktopSignIn").style.display ="block";
+	}
+
+
+}
+
+function isMobile() {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
 }
 
 function signOut() {
 	const auth2 = gapi.auth2.getAuthInstance()
 	auth2.signOut().then(function () {
 		console.log('User signed out.')
+		if (isMobile()) {
+			document.getElementById("SignInR").style.display = "block"
+			document.getElementById("mobileSignOut").style.display = "none"
+		} else {
+			document.getElementById("SignIn").style.display = "block"
+			document.getElementById("desktopSignIn").style.display = "none"
+		}
+		setCookie("isValid", false, 0)
 	})
+}
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function init() {

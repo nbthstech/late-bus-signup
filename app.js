@@ -91,5 +91,10 @@ function sendAlert() {
     else {
         alert('Invalid submission.');
     }
+
+    if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
+        signOut();
+    } 
+
 }
 
