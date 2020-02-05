@@ -3,30 +3,33 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com">
+	<script async defer src="https://apis.google.com/js/platform.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="images/techlogo.png" />
 	<title>Bus Routes</title>
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<script async defer src="buses.js"></script>
 	<script>
-		function getCookie(sName) {
-			sName = sName.toLowerCase();
-			let oCrumbles = document.cookie.split(';');
-			for (var i = 0; i < oCrumbles.length; i++) {
-				let oPair = oCrumbles[i].split('=');
-				let sKey = decodeURIComponent(oPair[0].trim().toLowerCase());
-				let sValue = oPair.length > 1 ? oPair[1] : '';
-				if (sKey == sName)
-					return decodeURIComponent(sValue);
-			}
-			return '';
-		}
-		const isValid = getCookie('isValid') === 'true'
-		if (!isValid) {
-			alert("You must sign in with a @nbtschools.org email")
-			window.stop()
-			window.location.replace("index.html")
-		}
+		gapi.load('auth2', () => {
+			console.log("init called")
+			gapi.auth2.init({
+				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
+				hosted_domain: 'nbtschools.org'
+			}).then(() => {
+				if (!isValid()) {
+					window.stop()
+					window.location.replace("index.html")
+				}
+			}, () => {
+				window.stop()
+				console.log("init failed")
+				alert("Sign in with a @nbtschools.org email")
+				window.location.replace("index.html")
+			})
+		})
 	</script>
 </head>
 
@@ -86,81 +89,77 @@
 
 
 
-		<div id="busTwo" class="slideB">
-			<div class="shaded">
-				<h1 class="titles" onclick="changeSlides(1)">Bus 2</h1>
+			<div id="busTwo" class="slideB">
+				<div class="shaded">
+					<h1 class="titles" onclick="changeSlides(1)">Bus 2</h1>
+				</div>
+				<ul class="routes fadeIn animated">
+					<li>Stop #1: Pardun & Leary</li>
+					<li>Stop #2: Lenox & Stelle</li>
+					<li>Stop #3: Chrome & 4th</li>
+					<li>Stop #4: Chrome & Allgair</li>
+					<li>Stop #5: Thomas & Jefferson</li>
+					<li>Stop #6: Nassau & Willow</li>
+					<li>Stop #7: Remsen & Hollywood</li>
+					<li>Stop #8: Linwood & Cleremont</li>
+					<li>Stop #9: Linwood School</li>
+					<li>Stop #10: Linwood & Cranbury Crossroads</li>
+					<li>Stop #11: Ridgewood & Newton</li>
+					<li>Stop #12: Fleetwood & Livingston</li>
+					<li>Stop #13: Newton & Patton</li>
+					<li>Stop #14: LaRose St. & Delaware</li>
+					<li>Stop #15: Oaktree Dr</li>
+					<li>Stop #16: Omaha & Redmond</li>
+					<li>Stop #17: Axel & Huron</li>
+					<li>Stop #18: Axel & Seneca</li>
+					<li>Stop #19: Axel & Carlise</li>
+					<li>Stop #20: Axel & Poplar</li>
+					<li>Stop #21: Princess & Orchard</li>
+					<li>Stop #22: Arlington & Apache</li>
+					<li>Stop #23: Jersey Ave</li>
+				</ul>
 			</div>
-			<ul class="routes fadeIn animated">
-				<li>Stop #1: Pardun & Leary</li>
-				<li>Stop #2: Lenox & Stelle</li>
-				<li>Stop #3: Chrome & 4th</li>
-				<li>Stop #4: Chrome & Allgair</li>
-				<li>Stop #5: Thomas & Jefferson</li>
-				<li>Stop #6: Nassau & Willow</li>
-				<li>Stop #7: Remsen & Hollywood</li>
-				<li>Stop #8: Linwood & Cleremont</li>
-				<li>Stop #9: Linwood School</li>
-				<li>Stop #10: Linwood & Cranbury Crossroads</li>
-				<li>Stop #11: Ridgewood & Newton</li>
-				<li>Stop #12: Fleetwood & Livingston</li>
-				<li>Stop #13: Newton & Patton</li>
-				<li>Stop #14: LaRose St. & Delaware</li>
-				<li>Stop #15: Oaktree Dr</li>
-				<li>Stop #16: Omaha & Redmond</li>
-				<li>Stop #17: Axel & Huron</li>
-				<li>Stop #18: Axel & Seneca</li>
-				<li>Stop #19: Axel & Carlise</li>
-				<li>Stop #20: Axel & Poplar</li>
-				<li>Stop #21: Princess & Orchard</li>
-				<li>Stop #22: Arlington & Apache</li>
-				<li>Stop #23: Jersey Ave</li>
-			</ul>
+
+			<div id="busThree" class="slideB">
+				<div class="shaded">
+					<h1 class="titles" onclick="changeSlides(1)">Bus 3</h1>
+				</div>
+				<ul class="routes fadeIn animated">
+					<li>Stop #1: Adams Ln (both sides)</li>
+					<li>Stop #2: Adams & Eden</li>
+					<li>Stop #3: Dillon Ct.</li>
+					<li>Stop #4: Rennaissance & Timber Ridge</li>
+					<li>Stop #5: Renaissance & Pin Oak</li>
+					<li>Stop #6: Renaissance & Lisa</li>
+					<li>Stop #7: Renaissance & Beacon Hill</li>
+					<li>Stop #8: Renaissance & Springfield</li>
+					<li>Stop #9: Renaissance & N-E Intersection</li>
+					<li>Stop #10: Renaissance & Azalea</li>
+					<li>Stop #11: Renaissance & Lindsay</li>
+					<li>Stop #12: Morris & Eagle</li>
+					<li>Stop #13: Morris & Palmetto</li>
+					<li>Stop #14: Morris & Marc</li>
+					<li>Stop #15: Deerbrook & Clubhouse</li>
+					<li>Stop #16: Deerbrook & Clubhouse</li>
+					<li>Stop #17: Church lane (both wways)</li>
+					<li>Stop #18: Lake Dr. & Old Georges Rd</li>
+					<li>Stop #19: Old Georges & Pine Meadow</li>
+					<li>Stop #20: Old Georges & Golden Valley</li>
+					<li>Stop #21: Old Georges & Peppermint Hill</li>
+					<li>Stop #22: Wood & Miriam</li>
+					<li>Stop #23: Edlys & Miriam</li>
+					<li>Stop #24: Farrington & Hoover</li>
+					<li>Stop #25: Mount Dr</li>
+				</ul>
+			</div>
+		</div>
+		<div id="rRight">
+			<img src="images/undraw_Map_dark_k9pw.png" alt="nb map" id="nbMap" />
 		</div>
 
-		<div id="busThree" class="slideB">
-			<div class="shaded">
-				<h1 class="titles" onclick="changeSlides(1)">Bus 3</h1>
-			</div>
-			<ul class="routes fadeIn animated">
-				<li>Stop #1: Adams Ln (both sides)</li>
-				<li>Stop #2: Adams & Eden</li>
-				<li>Stop #3: Dillon Ct.</li>
-				<li>Stop #4: Rennaissance & Timber Ridge</li>
-				<li>Stop #5: Renaissance & Pin Oak</li>
-				<li>Stop #6: Renaissance & Lisa</li>
-				<li>Stop #7: Renaissance & Beacon Hill</li>
-				<li>Stop #8: Renaissance & Springfield</li>
-				<li>Stop #9: Renaissance & N-E Intersection</li>
-				<li>Stop #10: Renaissance & Azalea</li>
-				<li>Stop #11: Renaissance & Lindsay</li>
-				<li>Stop #12: Morris & Eagle</li>
-				<li>Stop #13: Morris & Palmetto</li>
-				<li>Stop #14: Morris & Marc</li>
-				<li>Stop #15: Deerbrook & Clubhouse</li>
-				<li>Stop #16: Deerbrook & Clubhouse</li>
-				<li>Stop #17: Church lane (both wways)</li>
-				<li>Stop #18: Lake Dr. & Old Georges Rd</li>
-				<li>Stop #19: Old Georges & Pine Meadow</li>
-				<li>Stop #20: Old Georges & Golden Valley</li>
-				<li>Stop #21: Old Georges & Peppermint Hill</li>
-				<li>Stop #22: Wood & Miriam</li>
-				<li>Stop #23: Edlys & Miriam</li>
-				<li>Stop #24: Farrington & Hoover</li>
-				<li>Stop #25: Mount Dr</li>
-			</ul>
-		</div>
-	</div>
-	<div id="rRight">
-		<img src="images/undraw_Map_dark_k9pw.png" alt="nb map" id="nbMap" /> 
 	</div>
 
 	</div>
-
-	</div>
-
-
-
-	<script src="app.js"></script>
 
 </body>
 
