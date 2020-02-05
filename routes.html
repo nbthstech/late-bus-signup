@@ -12,25 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<script async defer src="buses.js"></script>
-	<script>
-		gapi.load('auth2', () => {
-			console.log("init called")
-			gapi.auth2.init({
-				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
-				hosted_domain: 'nbtschools.org'
-			}).then(() => {
-				if (!isValid()) {
-					window.stop()
-					window.location.replace("index.html")
-				}
-			}, () => {
-				window.stop()
-				console.log("init failed")
-				alert("Sign in with a @nbtschools.org email")
-				window.location.replace("index.html")
-			})
-		})
-	</script>
+	<script async defer src="app.js"></script>
 </head>
 
 <body>
@@ -54,7 +36,13 @@
 				<li><a href="routes.html" class="active">Routes</a></li>
 			</ul>
 		</nav>
-		<div class="rContainer">
+
+		<div class="loading">
+			<h2>Loading...</h2>
+			<p>Make sure you're logged in with your school account.</p>
+		</div>
+
+		<div id="rContainer">
 			<div id="nextButton" onclick="changeSlides(1)" style="margin: 20px 50%">Next Bus</div>
 			<div class="slideB">
 				<div class="shaded">
@@ -160,6 +148,28 @@
 	</div>
 
 	</div>
+	<script>
+		gapi.load('auth2', () => {
+			console.log("init called")
+			gapi.auth2.init({
+				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
+				hosted_domain: 'nbtschools.org'
+			}).then(() => {
+				if (!isValid()) {
+					//window.stop()
+					window.location.replace("index.html")
+				} else {
+					document.querySelector("#rContainer").style.display="block";
+					document.querySelector(".loading").style.display="none";
+				}
+			}, () => {
+				window.stop()
+				console.log("init failed")
+				alert("Sign in with a @nbtschools.org email")
+				window.location.replace("index.html")
+			})
+		})
+	</script>
 
 </body>
 

@@ -105,7 +105,7 @@ function sendAlert() {
     }
 
     else {
-        alert('Invalid submission.');
+        alert('Invalid submission. Try logging in with your school account');
     }
 
     

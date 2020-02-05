@@ -14,6 +14,12 @@ body {
 	display: none;
 }
 
+.loading {
+	text-align: center;
+	color: gray;
+	padding: 10px;
+}
+
 #content {
 	background: white;
 	width: 70%;
@@ -111,7 +117,9 @@ body {
 	font-size: 16px;
 }
 
-.rContainer {
+#rContainer {
+	/* display will be set to block once loaded */
+	display: none;
 	margin-top: 0;
 	padding-top: 0;
 	width: 50%;
@@ -334,6 +342,7 @@ body {
 }
 
 
+
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 75%;
@@ -440,7 +449,9 @@ body {
 	#nbMap {
 		display: none;
 	}
-	.rContainer {
+	#rContainer {
+		/* display will be set to block once loaded */
+		display: none; 
 		width: 100%;
 	}
 	.slideB ul {
