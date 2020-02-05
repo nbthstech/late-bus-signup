@@ -18,15 +18,11 @@ class Buses {
 	}
 	static init() {
 		gapi.load('auth2', function () {
-			const guath = gapi.auth2.getAuthInstance()
-			console.log("init called")
 			gapi.auth2.init({
 				client_id: '911898925511-qpuga83oe7to9vccnjrilqah9orn23j1.apps.googleusercontent.com',
 				hosted_domain: 'nbtschools.org'
 			}).then(() => {
-				console.log("init finished")
 			}, () => {
-				console.log("init failed")
 			})
 		})
 
@@ -56,7 +52,13 @@ function isMobile() {
 }
 
 function isValid() {
-	return getCookie("isValid")==="true"
+	// Buses.init()
+	// return getCookie("isValid") === "true"
+	return (
+		gapi.auth2.getAuthInstance()
+			.currentUser.get()
+			.getHostedDomain() === "nbtschools.org"
+	)
 }
 
 function signOut() {
@@ -90,7 +92,4 @@ function getCookie(cname) {
 	return value
 }
 
-function init() {
-	Buses.init()
-}
 //# sourceMappingURL=buses.js.map
