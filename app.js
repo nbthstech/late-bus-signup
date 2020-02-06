@@ -9,13 +9,13 @@ hamburger.addEventListener('click', ()=>{
 
 
 
-function checkResponse(val) {
-    var dropdown = document.querySelector('#selAct');
-    var val = dropdown.value;
-    var specifyInput = document.getElementById('specify');
-    var teacher = document.getElementById('teacher');
-    var specifyInputRow = document.getElementById('specifyRow');
-    var teacherRow = document.getElementById('teacherRow');
+function checkResponse() {
+    const dropdown = document.querySelector('#selAct');
+	const val = dropdown.value;
+	const specifyInput = document.getElementById('specify');
+	const teacher = document.getElementById('teacher');
+	const specifyInputRow = document.getElementById('specifyRow');
+	const teacherRow = document.getElementById('teacherRow');
     teacher.style.display='inline-block';
     teacherRow.style.display='block';
     if(val=='club' || val=='sport' || val=='other') {
@@ -68,33 +68,47 @@ function display(x) {
 }  
 
 function sendAlert() {
-    var x = document.getElementsByTagName("form");
+    var x = document.getElementsByTagName("form")
 
-    x[0].submit();// Form submission
-    var selection = document.getElementById('selAct').value;
-    if(selection == "club" || selection == 'sport' || selection == 'other'){
-        if(document.getElementById('specify').value != ""
-        && document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
-        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
-        && document.getElementById('pickBus').value != "") {
-            alert('You have submitted!'); 
+    // Form submission
+	var selection = document.getElementById('selAct').value;
+	if (isValid() && (["club", "sport", "other"].includes(selection))){
+		if (
+			document.getElementById('specify').value != "" &&
+			document.getElementById('teacher').value != "" &&
+			document.getElementById('ID').value != "" &&
+			document.getElementById('EMail').value != "" &&
+			document.getElementById('Name').value != "" &&
+			document.getElementById('pickBus').value != ""
+		) {
+			x[0].submit()
+			alert('You have submitted!')
+			if (!isMobile()) {
+				signOut()
+			} 
         }
     }
-    else if(selection == "extra_help" || selection == "detention"){
-        if(document.getElementById('teacher').value != "" && document.getElementById('ID').value != ""
-        && document.getElementById('EMail').value != "" && document.getElementById('Name').value != ""
-        && document.getElementById('pickBus').value != "") {
-            alert('You have submitted!'); 
+	else if (isValid() && (["extra_help", "detention"].includes(selection))){
+		if (
+			document.getElementById('teacher').value != "" &&
+			document.getElementById('ID').value != "" &&
+			document.getElementById('EMail').value != "" &&
+			document.getElementById('Name').value != "" &&
+			document.getElementById('pickBus').value != ""
+		) {
+			x[0].submit()
+			alert('You have submitted!')
+			if (!isMobile()) {
+				signOut()
+			} 
         }
     }
 
     else {
-        alert('Invalid submission.');
+        alert('Invalid submission. Try logging in with your school account');
     }
 
-    if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
-        signOut();
-    } 
+    
 
 }
 

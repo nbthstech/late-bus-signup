@@ -17,6 +17,12 @@ body {
 	display: none;
 }
 
+.loading {
+	text-align: center;
+	color: gray;
+	padding: 10px;
+}
+
 #content {
 	background: white;
 	width: 70%;
@@ -114,7 +120,9 @@ body {
 	font-size: 16px;
 }
 
-.rContainer {
+#rContainer {
+	/* display will be set to block once loaded */
+	display: none;
 	margin-top: 0;
 	padding-top: 0;
 	width: 50%;
@@ -146,6 +154,19 @@ body {
 
 #tech {
 	display: none;
+	/* Make image unselectable */
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+	pointer-events: none;
 }
 
 #busTwo, #busThree {
@@ -337,6 +358,7 @@ body {
 }
 
 
+
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 75%;
@@ -443,7 +465,9 @@ body {
 	#nbMap {
 		display: none;
 	}
-	.rContainer {
+	#rContainer {
+		/* display will be set to block once loaded */
+		display: none; 
 		width: 100%;
 	}
 	.slideB ul {

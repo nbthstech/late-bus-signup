@@ -20,8 +20,8 @@
 
 <body>
 	<div id="SignInR" data-width="100" data-longtile="true" class="g-signin2" data-onsuccess="onSignIn"></div>
-	<div class = "signOut" id = "mobileSignOut" onclick="signOut();">
-		<img id = "signOutIco" src="images\sign out button.svg"/>
+	<div class="signOut" id="mobileSignOut" onclick="signOut();">
+		<img id="signOutIco" src="images\sign out button.svg" />
 		Sign Out
 	</div>
 	<nav id="responsiveNav">
@@ -40,27 +40,11 @@
 			<ul>
 				<li>
 					<div id="SignIn" data-width="100" data-longtile="true" class="g-signin2" data-onsuccess="onSignIn"></div>
-					<script>
-						function signOut() {
-							var auth2 = gapi.auth2.getAuthInstance();
-							auth2.signOut().then(function () {
-								console.log('User signed out.');
-							});
-							if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-								document.getElementById("SignInR").style.display = "block";
-								document.getElementById("mobileSignOut").style.display="none";
-							} else {
-								document.getElementById("SignIn").style.display = "block";
-								document.getElementById("desktopSignIn").style.display ="none";
-							}
-
-						}
-					</script>
-					<div class = "signOut" id = "desktopSignIn" onclick="signOut();">
-						<img id = "signOutIco" src="images\sign out button.svg"/>
+					<div class="signOut" id="desktopSignIn" onclick="signOut();">
+						<img id="signOutIco" src="images\sign out button.svg" />
 						Sign Out
 					</div>
-				</li>	
+				</li>
 				<li><a href="index.html" class="active">Sign Up</a></li>
 				<li><a href="routes.html">Routes</a></li>
 			</ul>
@@ -85,31 +69,31 @@
 					<span id="name_validation" class="error_message"></span>
 				</div>
 
-        <div class="row" style='display:none' id ="teacherRow">
-            <input  required id="teacher" placeholder = "" class="input" name="entry.1208293355" type="text" value="" size="30"/><br/>
-            <span id="email_validation" class="error_message"></span>
-        </div>
+				<div class="row" style='display:none' id="teacherRow">
+					<input required id="teacher" placeholder="" class="input" name="entry.1208293355" type="text" value="" size="30" /><br />
+					<span id="email_validation" class="error_message"></span>
+				</div>
 
-        <div class ="row hidden">
-            <input required id="ID" class="input" name="entry.425692450"  type="text"size="30"/><br/>
-        </div>
-        <div class ="row hidden">
-            <input required id="EMail" placeholder = "" class="input" name="entry.1309411018" value=""type="text"size="30"/><br/>
-        </div>
-        <div class ="row hidden">
-            <input required id="Name" placeholder = "" class="input" name="entry.791638004" value=""type="text"size="30"/><br/>
+				<div class="row hidden">
+					<input required id="ID" class="input" name="entry.425692450" type="text" size="30" /><br />
+				</div>
+				<div class="row hidden">
+					<input required id="EMail" placeholder="" class="input" name="entry.1309411018" value="" type="text" size="30" /><br />
+				</div>
+				<div class="row hidden">
+					<input required id="Name" placeholder="" class="input" name="entry.791638004" value="" type="text" size="30" /><br />
 
-        </div>
-        <div class = "row">
-            <select required class = "input" name = "entry.1199041262" id="pickBus">
-                <option disabled selected value> -- Select a Bus -- </option>
-                <option value = "bus1">Bus 1</option>
-                <option value = "bus2">Bus 2</option>
-                <option value = "bus3">Bus 3</option>
-            </select>
-        </div>
-        <input onclick = "sendAlert();" id="submit_button" type="submit" value="Submit"/>
-    </form>
+				</div>
+				<div class="row">
+					<select required class="input" name="entry.1199041262" id="pickBus">
+						<option disabled selected value> -- Select a Bus -- </option>
+						<option value="bus1">Bus 1</option>
+						<option value="bus2">Bus 2</option>
+						<option value="bus3">Bus 3</option>
+					</select>
+				</div>
+				<input onclick="sendAlert();" id="submit_button" type="submit" value="Submit" />
+			</form>
 		</div>
 		<div id="iRight">
 			<img src="images/techlogo.png" alt="techlogo" id="raider" />
