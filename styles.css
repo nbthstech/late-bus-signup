@@ -1,3 +1,5 @@
+/* theme color: rgb(83, 83, 216) || #5353d8 */
+
 body {
 	font-family: Verdana, sans-serif;
 	/* background by SVGBackgrounds.com */
@@ -17,6 +19,14 @@ body {
 	text-align: center;
 	color: gray;
 	padding: 10px;
+}
+
+/* Adjusting button styling on both button divs/elements */
+#submit_button, #nextButton {
+	padding: 10px;
+}
+#submit_button:active, #nextButton:active {
+	transform: scale(0.9);
 }
 
 #content {
@@ -267,8 +277,6 @@ body {
 	color: white;
 	box-shadow: 3px 3px 0px 0px #f1ecec;
 	width: auto;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 #submit_button:hover {
@@ -310,9 +318,8 @@ body {
 	font-size: 15px;
 	width: 5em;
 	border-radius: 10px;
-	background-image: linear-gradient(to left, rgb(59, 59, 221), rgb(50, 50, 223));
-	margin-left: 50%;
-	transform: translateX(-50%);
+	background-image: linear-gradient(to left, rgb(107, 107, 202), rgb(83, 83, 216));
+	margin-left: 32%;
 	box-shadow: 1px 2px 0px 0px #7a7777;
 	margin-bottom: 3%;
 	cursor: pointer;
