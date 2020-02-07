@@ -6,7 +6,7 @@ class Buses {
 		Buses.user = googleUser
 		Buses.profile = googleUser.getBasicProfile()
 		if (!(Buses.user.getHostedDomain() === "nbtschools.org")) {
-			alert("Please login with a school google account")
+			alert("Please login with a school google account.")
 			setCookie("isValid", false, 1)
 			document.getElementById("submit_button").hidden = true
 		} else {
