@@ -105,7 +105,7 @@ function sendAlert() {
     }
 
     else {
-        let message = (isValid()) ? 'Invalid submission. Please fill out the whole form.' : 'Invalid submission. Please login with your school account'; //Based on if user is signed in with school domain account.
+        let message = (isValid()) ? 'Invalid submission. Please fill out the whole form, or contact support at nbthstechnologyclub@gmail.com.' : 'Invalid submission. Please login with your school account'; //Based on if user is signed in with school domain account.
         alert(message)
     }
 

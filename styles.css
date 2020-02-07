@@ -250,9 +250,16 @@ body {
 	padding-bottom: 4%;
 }
 
+#instructions {
+	color: rgb(83, 83, 216);
+	font-family: Verdana, sans-serif;
+	font-size: 0.8em;
+	padding: 8px;
+}
+
 #submit_button {
+	display: none; /* Will be removed once user signs in with school account */
 	margin: 15px;
-	display: inline-block;
 	border-radius: 10px;
 	border: none;
 	background-image: linear-gradient(to left, rgb(107, 107, 202), rgb(83, 83, 216));

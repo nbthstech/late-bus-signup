@@ -3,16 +3,20 @@ class Buses {
 	static onSignIn(googleUser) {
 		const name = googleUser.getBasicProfile().getName()
 		const email = googleUser.getBasicProfile().getEmail()
+		const submitBtn = document.getElementById("submit_button")
+		const instructions = document.getElementById("instructions")
 		Buses.user = googleUser
 		Buses.profile = googleUser.getBasicProfile()
 		if (!(Buses.user.getHostedDomain() === "nbtschools.org")) {
 			alert("Please login with a school google account.")
 			setCookie("isValid", false, 1)
-			document.getElementById("submit_button").hidden = true
+			instructions.style.display = "block"
+			submitBtn.style.display = "none"
 		} else {
 			document.cookie = "isValid=true"
 			setCookie("isValid", true, 1)
-			document.getElementById("submit_button").hidden = false
+			instructions.style.display = "none"
+			submitBtn.style.display = "inline-block"
 		}
 
 	}
