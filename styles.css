@@ -319,9 +319,10 @@ body {
 	width: 5em;
 	border-radius: 10px;
 	background-image: linear-gradient(to left, rgb(107, 107, 202), rgb(83, 83, 216));
+	box-shadow: 1px 2px 2px 0px #7a7777;
 	margin-left: 32%;
-	box-shadow: 1px 2px 0px 0px #7a7777;
 	margin-bottom: 3%;
+	margin-top: 3%;
 	cursor: pointer;
 	-webkit-touch-callout: none;
 	/* iOS Safari */
@@ -339,7 +340,7 @@ body {
 }
 
 #nextButton:hover {
-	box-shadow: 1.5px 2.5px 0px 0px #686666;
+	box-shadow: 1.5px 2.5px 2px 0px #686666;
 }
 
 #SignInR {
