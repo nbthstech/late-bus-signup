@@ -489,6 +489,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 		-webkit-column-gap: 30px;
 		column-count: 0;
 		column-gap: 30px;
+		padding-left:0;
+	}
+	#nextButton {
+		margin-top:10%;
 	}
 	.routes {
 		padding-left: 8%;
