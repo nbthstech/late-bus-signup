@@ -29,6 +29,18 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 	transform: scale(0.9);
 }
 
+/* SignIn Button Animation For Both Desktop (#SignIn) and Mobile (#SignInR) */
+#SignIn, #SignInR {
+	animation: 5s linear 3s infinite shake;
+}
+@keyframes shake {
+	5% { transform: translateY(-2px) }
+	10%, 20%, 30%, 40% { transform: translateY(-3px) rotate(3deg) }
+	15%, 25%, 35%, 45% { transform: translateY(-3px) rotate(-3deg) }
+	50%, 100% { transform: translateY(0px) }
+}
+
+
 #content {
 	background: white;
 	width: 70%;
