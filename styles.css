@@ -247,7 +247,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 #iForm {
-	margin-top: 0;
+	margin-top: 40px;
 	padding-top: 0;
 	width: 50%;
 	text-align: center;
@@ -306,7 +306,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 #raider {
 	max-width: 50%;
 	margin: 50px auto;
-	padding-top: 10%;
 	padding-left: 20%;
 }
 
@@ -456,6 +455,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 		display: none;
 	}
 	#iForm {
+		margin-top: 0;
 		float: none;
 		width: 100%;
 		top: 10%;
