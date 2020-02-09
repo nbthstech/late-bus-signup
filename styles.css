@@ -52,6 +52,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 	top: 15%;
 	transform: translateX(-50%);
 	margin-bottom: 5%;
+	padding: 10px;
 }
 
 #message {
